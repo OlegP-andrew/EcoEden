@@ -1,35 +1,38 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float jumpForce = 10.0f;
-    public float gravity = 9.8f;
-    public float turnSmoothTime = 1f;
-    float turnSmoothVelocity;
+    PlayerInput playerInput;
+    InputAction moveAction; 
+    InputAction rotateAction;
 
-    private CharacterController controller;
-    private Vector3 velocity;
+    [SerializeField] float speed = 5.0f;
+    [SerializeField] float rotationSpeed = 700f;
 
     private void Start()
     {
-        controller = GetComponent<CharacterController>();
+        playerInput = GetComponent<PlayerInput>();
+        moveAction = playerInput.actions.FindAction("Move");
+        rotateAction = playerInput.actions.FindAction("Rotate");
     }
 
     private void Update()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
+        MovePlayer();
+        // RotatePlayer();
+    }
 
-        Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
+    private void RotatePlayer()
+    {
+        Vector2 direction = rotateAction.ReadValue<Vector2>();
+        Quaternion toRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.y), Vector3.up);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+    }
 
-        if (moveDirection.magnitude >= 0.1f)
-        {
-            float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
-
-            controller.Move(moveDirection * Time.deltaTime * speed);
-        }
+    private void MovePlayer()
+    {
+        Vector2 direction = moveAction.ReadValue<Vector2>();
+        transform.position += new Vector3(direction.x, 0, direction.y) * speed * Time.deltaTime;
     }
 }
