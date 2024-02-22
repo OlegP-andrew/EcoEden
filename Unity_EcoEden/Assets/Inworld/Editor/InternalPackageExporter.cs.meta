@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 53a74d5890050614bb47652e3d397f80
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229406
+  packageName: AI NPC Engine v.3.0 - Dialogue & Behavior for Unity - Inworld
+  packageVersion: 3.1.1
+  assetPath: Assets/Inworld/Editor/InternalPackageExporter.cs
+  uploadId: 643097
