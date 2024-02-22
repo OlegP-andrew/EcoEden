@@ -16,9 +16,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 direction;
     [SerializeField] float speed = 5.0f;
-    [SerializeField] float rotationSpeed = 700f;
-    [SerializeField] float smooth = 5f;
-
+    
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
