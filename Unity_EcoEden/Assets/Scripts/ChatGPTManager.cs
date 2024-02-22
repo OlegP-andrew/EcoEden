@@ -7,12 +7,11 @@ using TMPro;
 
 public class ChatGPTManager : MonoBehaviour
 {
-    public OnResponseEvent onResponse;
-    [System.Serializable]
+    // public OnResponseEvent onResponse;
+    // [System.Serializable]
+    // public class OnResponseEvent : UnityEvent<string> {}
 
-    public class OnResponseEvent : UnityEvent<string> {}
-
-    private OpenAIApi openAI = new OpenAIApi("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");
+    private OpenAIApi openAI = new OpenAIApi("");
     private List<ChatMessage> messages = new List<ChatMessage>();
 
     private string line;
