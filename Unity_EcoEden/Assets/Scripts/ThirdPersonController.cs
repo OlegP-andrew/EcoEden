@@ -86,6 +86,7 @@ namespace StarterAssets
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
+        private int jumpCounter = 0;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -182,6 +183,9 @@ namespace StarterAssets
                 transform.position.z);
             Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
                 QueryTriggerInteraction.Ignore);
+
+            // reset jump counter
+            if (Grounded) jumpCounter = 0;
 
             // update animator if using character
             if (_hasAnimator)
@@ -281,7 +285,7 @@ namespace StarterAssets
 
         private void JumpAndGravity()
         {
-            if (Grounded)
+            if (Grounded || jumpCounter != 2)
             {
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
@@ -311,6 +315,9 @@ namespace StarterAssets
                         _animator.SetBool(_animIDJump, true);
                     }
                 }
+
+                // Set jump counter
+                jumpCounter += 1;
 
                 // jump timeout
                 if (_jumpTimeoutDelta >= 0.0f)
