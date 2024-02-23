@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146eba7038a14426a7d95a5b80da5291, type: 3}
+  m_Name: oplisov
+  m_EditorClassIdentifier: 
+  m_PlayerName: oplisov
+  m_PlayerData: []
+  m_Workspaces:
+  - name: workspaces/ecoeden
+    displayName: EcoEden
+    experimentalFeatures: []
+    billingAccount: billing-accounts/1c6877fb-f401-482b-ab1e-5b73be8ac965
+    meta: 
+    runtimeAccess: RUNTIME_ACCESS_PRIVATE
+    scenes:
+    - name: workspaces/ecoeden/scenes/testscene
+      displayName: TestScene
+      description: Scene for player to ask questions to FLORA about their mission,
+        a botranical lab
+      characterReferences:
+      - character: workspaces/ecoeden/characters/flora
+        characterOverloads:
+        - defaultCharacterDescription:
+            givenName: FLORA
+            description: FLORA, meaning Friendly Learning Organic Robotic Assistant,
+              is a plant-based AI companion to the main character. Flora's mission
+              is to guide the main character through the alien world, while also
+              serving as a tool to interact with surrounding alien plants. Flora
+              can extract, analyze, and combine DNA of alien plants, providing valuable
+              information and resources for the main character's journey. With a
+              friendly and nurturing personality, Flora is always there to support
+              and assist in any way possible.
+          defaultCharacterAssets:
+            rpmModelUri: 
+            rpmImageUriPortrait: 
+            rpmImageUriPosture: 
+            avatarImg: 
+            avatarImgOriginal: 
+            thumbnailProgress: 0
+            avatarProgress: 0
+    keySecrets:
+    - key: 5Jhdu6b00GGf8lCA5RbjDpaVOwujzVDA
+      secret: aaiytPJKIkmt9pKD07aAiQyqvUuJUu3mpUU7bCzUHaxbhaPS5ofedEtGlKH617WT
+      state: ACTIVE
+  - name: workspaces/default-sqeum5tfasrxswsvqdv0cw
+    displayName: Inworld AI Demos
+    experimentalFeatures: []
+    billingAccount: billing-accounts/1c6877fb-f401-482b-ab1e-5b73be8ac965
+    meta: 
+    runtimeAccess: RUNTIME_ACCESS_PRIVATE
+    scenes: []
+    keySecrets: []
+  m_UserID: 
+  m_BillingAccount: billing-accounts/1c6877fb-f401-482b-ab1e-5b73be8ac965
