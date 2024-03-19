@@ -7,6 +7,7 @@ public class TextInterface : MonoBehaviour
     public GameObject outgoingBubblePrefab;
     public GameObject incomingBubblePrefab;
     public Transform dialoguePanel;
+    public Transform scrollPanel;
     public TMP_InputField inputField;
 
     public ChatGPTManager chatGPTManager;
@@ -42,6 +43,6 @@ public class TextInterface : MonoBehaviour
     private void ScrollToBottom()
     {
         Canvas.ForceUpdateCanvases();
-        dialoguePanel.GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
+        scrollPanel.GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
     }
 }
