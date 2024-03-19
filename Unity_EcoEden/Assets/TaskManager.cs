@@ -7,6 +7,8 @@ public class TaskManager : MonoBehaviour
     public Transform taskPanel;
 
     private List<Task> tasks = new List<Task>();
+    private List<GameObject> instantiatedTaskItems = new List<GameObject>();
+    [SerializeField] float verticalSpacing = 75f;
 
     private void Start()
     {
@@ -19,8 +21,11 @@ public class TaskManager : MonoBehaviour
     {
         Task task = new Task(taskName);
         tasks.Add(task);
+
         GameObject newTaskItem = Instantiate(taskItemPrefab, taskPanel);
         newTaskItem.GetComponent<TaskItem>().SetText(taskName);
+        instantiatedTaskItems.Add(newTaskItem);
+        AdjustTaskPosition(newTaskItem.transform, instantiatedTaskItems.Count);
     }
 
     public void RemoveTask(string taskName)
@@ -31,22 +36,33 @@ public class TaskManager : MonoBehaviour
             tasks.Remove(taskToRemove);
         }
 
-        foreach (Transform child in taskPanel)
+        GameObject taskItemToRemove = instantiatedTaskItems.Find(item => item.GetComponent<TaskItem>().GetText() == taskName);
+        if (taskItemToRemove != null)
         {
-            if (child.GetComponent<TaskItem>().GetText() == taskName)
-            {
-                Destroy(child.gameObject);
-                break;
-            }
+            instantiatedTaskItems.Remove(taskItemToRemove);
+            Destroy(taskItemToRemove);
         }
+
+        for (int i = 0; i < instantiatedTaskItems.Count; i++)
+        {
+            AdjustTaskPosition(instantiatedTaskItems[i].transform, i);
+        }
+    }
+
+    private void AdjustTaskPosition(Transform taskTransform, int index)
+    {
+        float posY = taskTransform.localPosition.y - (index * (verticalSpacing + taskTransform.GetComponent<RectTransform>().rect.height));
+        taskTransform.localPosition = new Vector3(taskTransform.localPosition.x, posY, taskTransform.localPosition.z);
     }
 }
 
 public class Task
 {
     public string Name { get; private set; }
+
     public Task(string name)
     {
         Name = name;
     }
 }
+
