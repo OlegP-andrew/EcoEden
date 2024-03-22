@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 903676583860813053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.02479, y: -8.492714, z: -13.217873}
+  m_LocalPosition: {x: -18.024792, y: -8.492714, z: -13.217873}
   m_LocalScale: {x: 1.6599998, y: 1.6599998, z: 1.6599998}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2438,7 +2438,6 @@ Transform:
   - {fileID: 3244147433633800491}
   - {fileID: 7723664045565929072}
   - {fileID: 7889971194460249539}
-  - {fileID: 6332879389716646217}
   - {fileID: 251976167089248504}
   - {fileID: 5812130811033221912}
   m_Father: {fileID: 7146468901827754262}
@@ -3723,118 +3722,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &6782359713060007847
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6332879389716646217}
-  - component: {fileID: 6740297503955318111}
-  - component: {fileID: 240156987037731555}
-  - component: {fileID: 5869796991827062207}
-  m_Layer: 3
-  m_Name: plantbuddy v1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &6332879389716646217
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6782359713060007847}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0011986677, y: 1.066, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 15}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 8246157542265664201}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6740297503955318111
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6782359713060007847}
-  m_Mesh: {fileID: 349292030207199084, guid: 120a759ce445bee468a9ef35d8412ed6, type: 3}
---- !u!23 &240156987037731555
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6782359713060007847}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 5561349426305759274, guid: a1ff094a0bacfcb4eade16e900f734d3, type: 3}
-  - {fileID: -7791486788655378091, guid: a1ff094a0bacfcb4eade16e900f734d3, type: 3}
-  - {fileID: 1151844921754575795, guid: a1ff094a0bacfcb4eade16e900f734d3, type: 3}
-  - {fileID: -4778689452112922190, guid: a1ff094a0bacfcb4eade16e900f734d3, type: 3}
-  - {fileID: -4597107667637640440, guid: a1ff094a0bacfcb4eade16e900f734d3, type: 3}
-  - {fileID: -3273067787071206508, guid: a1ff094a0bacfcb4eade16e900f734d3, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5869796991827062207
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6782359713060007847}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.09503466, y: 0.11, z: 0.04175566}
-  m_Center: {x: 0.00087187806, y: -0.017, z: 0.000000014901161}
 --- !u!1 &6913710573961545569
 GameObject:
   m_ObjectHideFlags: 0
