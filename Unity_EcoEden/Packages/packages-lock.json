@@ -7,6 +7,20 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.cycling74.chordsbassdemo": {
+      "version": "file:/Users/blaineblack/Desktop/S24 Classes/AGS/chordbassdemo/ChordsBassdemo",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.cycling74.rnbotypes": "0.0.2"
+      }
+    },
+    "com.cycling74.rnbotypes": {
+      "version": "file:/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/RNBOTypes",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.srcnalt.openai-unity": {
       "version": "https://github.com/srcnalt/OpenAI-Unity.git",
       "depth": 0,

@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.cycling74.chordsbassdemo": "file:/Users/blaineblack/Desktop/S24 Classes/AGS/chordbassdemo/ChordsBassdemo",
+    "com.cycling74.rnbotypes": "file:/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/RNBOTypes",
     "com.srcnalt.openai-unity": "https://github.com/srcnalt/OpenAI-Unity.git",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.2.0",
