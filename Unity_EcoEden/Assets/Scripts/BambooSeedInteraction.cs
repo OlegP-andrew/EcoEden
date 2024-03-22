@@ -41,7 +41,7 @@ public class BambooSeedInteraction : MonoBehaviour
     private void SinkSeed()
     {
         isPushing = false;
-        GrowPlant();
+        // GrowPlant();
     }
 
     private void GrowPlant()
