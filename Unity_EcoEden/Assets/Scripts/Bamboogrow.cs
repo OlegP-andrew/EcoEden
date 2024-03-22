@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bamboogrow : MonoBehaviour
+public class BambooGrow : MonoBehaviour
 {
     public GameObject bamboo;
     public bool seed = false;

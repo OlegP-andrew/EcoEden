@@ -32,16 +32,18 @@ public class ChatGPTManager : MonoBehaviour
                 StopCoroutine("PlayText");
                 txt.text = line;
             }
-            else 
-            {
-                txt.text = "";
-                AskChatGPT("Say something evil in 20 words");
-            }
+            // else 
+            // {
+            //     txt.text = "";
+            //     AskChatGPT("Say something evil in 20 words");
+            // }
         }
     }
 
-    public async void AskChatGPT(string newText)
+    public async void AskChatGPT(string newText, TextMeshProUGUI text)
     {
+        txt = text; 
+
         respondToInput = false;
         ChatMessage newMessage = new ChatMessage();
         newMessage.Content = newText;
@@ -60,13 +62,15 @@ public class ChatGPTManager : MonoBehaviour
             var chatResponse = response.Choices[0].Message;
             messages.Add(chatResponse);
 
-            Debug.Log(chatResponse.Content);
-
             respondToInput = true;
 
             // onResponse.Invoke(chatResponse.Content);
             line = "";
             line = chatResponse.Content;
+
+            // Delete later
+            if (newText == "who are you") line = "I'm an astronaut. And by the way you look I assume you are a plant robot?";
+
             StartCoroutine("PlayText");
         }
     }
