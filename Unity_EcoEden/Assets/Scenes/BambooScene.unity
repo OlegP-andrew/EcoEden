@@ -550,7 +550,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 10651, guid: 0000000000000000f000000000000000, type: 0}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -1124,7 +1124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501974609474740623, guid: 103cf3c9c88491446977866f6da8400d, type: 3}
       propertyPath: Gravity
-      value: -17
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 2501974609474740623, guid: 103cf3c9c88491446977866f6da8400d, type: 3}
       propertyPath: MoveSpeed
@@ -1132,7 +1132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501974609474740623, guid: 103cf3c9c88491446977866f6da8400d, type: 3}
       propertyPath: JumpHeight
-      value: 5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2501974609474740623, guid: 103cf3c9c88491446977866f6da8400d, type: 3}
       propertyPath: SprintSpeed
@@ -1391,43 +1391,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5440438701294038990, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.12
+      value: 39.94
       objectReference: {fileID: 0}
     - target: {fileID: 5440438701294038990, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.21
+      value: 1.87
       objectReference: {fileID: 0}
     - target: {fileID: 5440438701294038990, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 89.06
+      value: 12.92
       objectReference: {fileID: 0}
     - target: {fileID: 5440438701294038990, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8913688
+      value: 0.7249187
       objectReference: {fileID: 0}
     - target: {fileID: 5440438701294038990, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.34445283
       objectReference: {fileID: 0}
     - target: {fileID: 5440438701294038990, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.38494787
       objectReference: {fileID: 0}
     - target: {fileID: 5440438701294038990, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.4532788
+      value: 0.45569754
       objectReference: {fileID: 0}
     - target: {fileID: 5440438701294038990, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -58.238
       objectReference: {fileID: 0}
     - target: {fileID: 5440438701294038990, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 27.637
       objectReference: {fileID: 0}
     - target: {fileID: 5440438701294038990, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 48.705
       objectReference: {fileID: 0}
     - target: {fileID: 7870572044080835067, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_IsKinematic
@@ -1867,6 +1867,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: growing bamboo
       objectReference: {fileID: 0}
+    - target: {fileID: 8604183186842095183, guid: a379ecee7f9412e4f8e6c4c76e2e1f94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604183186842095183, guid: a379ecee7f9412e4f8e6c4c76e2e1f94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.2
+      objectReference: {fileID: 0}
     - target: {fileID: 9051178044413119007, guid: a379ecee7f9412e4f8e6c4c76e2e1f94, type: 3}
       propertyPath: m_Size.x
       value: 5.2173157
@@ -1877,7 +1885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9051178044413119007, guid: a379ecee7f9412e4f8e6c4c76e2e1f94, type: 3}
       propertyPath: m_Size.z
-      value: 5.7799044
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 9051178044413119007, guid: a379ecee7f9412e4f8e6c4c76e2e1f94, type: 3}
       propertyPath: m_Enabled
@@ -1893,7 +1901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9051178044413119007, guid: a379ecee7f9412e4f8e6c4c76e2e1f94, type: 3}
       propertyPath: m_Center.z
-      value: -0.5405345
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 9051178044413119007, guid: a379ecee7f9412e4f8e6c4c76e2e1f94, type: 3}
       propertyPath: m_IsTrigger
@@ -1964,8 +1972,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 8.499615, y: 19.091108, z: 5.794845}
-  m_Center: {x: -0.17956135, y: 7.7083635, z: 0.32773042}
+  m_Size: {x: 8.499615, y: 19.091108, z: 5.64}
+  m_Center: {x: -0.17956135, y: 7.7083635, z: 1.04}
 --- !u!114 &2925190102720068715
 MonoBehaviour:
   m_ObjectHideFlags: 0

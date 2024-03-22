@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class SeedInteraction : MonoBehaviour
+public class BambooSeedInteraction : MonoBehaviour
 {
     public GameObject plantPrefab;
     public float pushForce = 10f;
@@ -41,7 +41,7 @@ public class SeedInteraction : MonoBehaviour
     private void SinkSeed()
     {
         isPushing = false;
-        // GrowPlant();
+        GrowPlant();
     }
 
     private void GrowPlant()
