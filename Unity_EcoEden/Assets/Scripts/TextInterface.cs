@@ -9,6 +9,7 @@ public class TextInterface : MonoBehaviour
     public Transform dialoguePanel;
     public Transform scrollPanel;
     public TMP_InputField inputField;
+    public TextMeshProUGUI txt;
 
     public ChatGPTManager chatGPTManager;
 
@@ -20,7 +21,8 @@ public class TextInterface : MonoBehaviour
     private void OnMessageSubmitted(string message)
     {
         CreateOutgoingBubble(message);
-        chatGPTManager.AskChatGPT(message);
+        CreateIncomingBubble();
+        chatGPTManager.AskChatGPT(message, txt);
         inputField.text = "";
     }
 
@@ -32,11 +34,12 @@ public class TextInterface : MonoBehaviour
         ScrollToBottom();
     }
 
-    public void CreateIncomingBubble(string message)
+    public void CreateIncomingBubble()
     {
         GameObject bubble = Instantiate(incomingBubblePrefab, dialoguePanel);
         bubble.SetActive(true);
-        bubble.GetComponentInChildren<TextMeshProUGUI>().text = message;
+        txt = bubble.GetComponentInChildren<TextMeshProUGUI>();
+        // bubble.GetComponentInChildren<TextMeshProUGUI>().text = message;
         ScrollToBottom();
     }
 
