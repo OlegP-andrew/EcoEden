@@ -25,19 +25,14 @@ public class ChatGPTManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (respondToInput && Input.GetKeyDown(KeyCode.Q))
-        {
-            if (line != txt.text)
-            {
-                StopCoroutine("PlayText");
-                txt.text = line;
-            }
-            // else 
-            // {
-            //     txt.text = "";
-            //     AskChatGPT("Say something evil in 20 words");
-            // }
-        }
+        // if (respondToInput && Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     if (line != txt.text)
+        //     {
+        //         StopCoroutine("PlayText");
+        //         txt.text = line;
+        //     }
+        // }
     }
 
     public async void AskChatGPT(string newText, TextMeshProUGUI text)
@@ -64,12 +59,8 @@ public class ChatGPTManager : MonoBehaviour
 
             respondToInput = true;
 
-            // onResponse.Invoke(chatResponse.Content);
             line = "";
             line = chatResponse.Content;
-
-            // Delete later
-            if (newText == "who are you") line = "I'm an astronaut. And by the way you look I assume you are a plant robot?";
 
             StartCoroutine("PlayText");
         }
