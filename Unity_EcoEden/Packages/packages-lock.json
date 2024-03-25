@@ -8,7 +8,7 @@
       "url": "https://packages.unity.com"
     },
     "com.cycling74.chordsbassdemo": {
-      "version": "file:/Users/blaineblack/Desktop/S24 Classes/AGS/chordbassdemo/ChordsBassdemo",
+      "version": "file:../BlainePackages/chordbassdemo/ChordsBassdemo",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -16,7 +16,7 @@
       }
     },
     "com.cycling74.rnbotypes": {
-      "version": "file:/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/RNBOTypes",
+      "version": "file:../BlainePackages/rnbo.unity.audioplugin/RNBOTypes",
       "depth": 0,
       "source": "local",
       "dependencies": {}
