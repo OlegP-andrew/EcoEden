@@ -1,0 +1,3 @@
+[submodule "rnbo.unity.audioplugin"]
+	path = Unity_EcoEden/BlainePackages/rnbo.unity.audioplugin
+	url = https://github.com/Cycling74/rnbo.unity.audioplugin.git
