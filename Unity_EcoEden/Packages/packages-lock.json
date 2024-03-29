@@ -16,7 +16,7 @@
       }
     },
     "com.cycling74.rnbotypes": {
-      "version": "file:/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/RNBOTypes",
+      "version": "file:../BlainePackages/rnbo.unity.audioplugin/RNBOTypes",
       "depth": 0,
       "source": "local",
       "dependencies": {}
