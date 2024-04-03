@@ -1,0 +1,60 @@
+[
+  {
+    "name": "untitled",
+    "preset": {
+      "__sps": {
+        "bass": {},
+        "chord1": [
+          {},
+          {},
+          {},
+          {},
+          {}
+        ],
+        "chord1markov": {},
+        "reverb": {
+          "__sps": {
+            "combineL": {},
+            "combineR": {}
+          }
+        }
+      },
+      "bassvol": {
+        "value": 110
+      },
+      "chord1att": {
+        "value": 12000
+      },
+      "chord1dec": {
+        "value": 24000
+      },
+      "chord1oct": {
+        "value": 4
+      },
+      "chord1rel": {
+        "value": 3000
+      },
+      "chord1spawnrate": {
+        "value": 31
+      },
+      "chord1sus": {
+        "value": 0
+      },
+      "chord1voicevol": {
+        "value": 100
+      },
+      "verbdecaytime": {
+        "value": 0.7
+      },
+      "verbdiffusion": {
+        "value": 0.7
+      },
+      "verbhfdamp": {
+        "value": 8000
+      },
+      "verbsize": {
+        "value": 1
+      }
+    }
+  }
+]

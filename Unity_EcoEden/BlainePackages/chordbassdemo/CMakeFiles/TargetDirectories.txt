@@ -1,0 +1,7 @@
+/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/build/CMakeFiles/RNBOUnityPlugin.dir
+/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/build/CMakeFiles/edit_cache.dir
+/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/build/CMakeFiles/rebuild_cache.dir
+/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/build/CMakeFiles/list_install_components.dir
+/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/build/CMakeFiles/install.dir
+/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/build/CMakeFiles/install/local.dir
+/Users/blaineblack/Documents/GitHub/rnbo.unity.audioplugin/build/CMakeFiles/install/strip.dir
