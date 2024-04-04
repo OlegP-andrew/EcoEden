@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CinemachineTarget
+  - Seed
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - CameraView
   - Water
   - UI
   - 
