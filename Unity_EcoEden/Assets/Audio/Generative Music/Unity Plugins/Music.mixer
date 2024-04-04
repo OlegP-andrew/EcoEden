@@ -1,5 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-309366034831458348
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: f17892a6d04b741cc928bdef2a4aa1f2
+  m_EffectName: Chords_Bassdemo
+  m_MixLevel: cf23f56d5f227415f834835d106b8e18
+  m_Parameters:
+  - m_ParameterName: 'Instance Index '
+    m_GUID: f4d4e4bcb38014d04b9a5aac936476c8
+  - m_ParameterName: bassvol
+    m_GUID: adef23f1e59f741689157d0da096e553
+  - m_ParameterName: chord1spawnrate
+    m_GUID: 38a022f6f975d47baaf7e8f2379802db
+  - m_ParameterName: chord1oct
+    m_GUID: b61237b3aa7f44a35a607c36af2f22d8
+  - m_ParameterName: chord1voicevol
+    m_GUID: f1ddccbf43dc048d1aa81a9d22e63b91
+  - m_ParameterName: chord1att
+    m_GUID: ff23f1fcd2309450e84357a666216aaf
+  - m_ParameterName: chord1dec
+    m_GUID: 8690327937dcb457c886b6f7a391f495
+  - m_ParameterName: verbsize
+    m_GUID: e6466ae07deac48b39d42ce29965cfa7
+  - m_ParameterName: verbdecaytime
+    m_GUID: 087db22a00b70405d8e85eadf2123eb2
+  - m_ParameterName: verbhfdamp
+    m_GUID: 386bd3e158f83432cac36521f3c30fe7
+  - m_ParameterName: chord1sus
+    m_GUID: e7386b240e9d541a4ac5563f8c1e1cdd
+  - m_ParameterName: verbdiffusion
+    m_GUID: fa5833d1836494932819810e8c7ac558
+  - m_ParameterName: chord1rel
+    m_GUID: 78babef4ab7e247838ec04a1618d47ba
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -37,7 +77,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400004}
-  - {fileID: 4270249605098120319}
+  - {fileID: -309366034831458348}
   - {fileID: 731524659584911170}
   m_UserColorIndex: 0
   m_Mute: 0
@@ -81,6 +121,7 @@ AudioMixerSnapshotController:
     694ddefbc5c8d44c2b5f48bc28e61339: 24000
     8c16c91c16273419eac14d8e8fdb12f3: 18000
     4d3bf28c20a4e48d595a2a79a982f5fa: 6000
+    f4d4e4bcb38014d04b9a5aac936476c8: 1
     1f7feecca8f38444eb1232ebe8a9eecb: 0
     daf74d0daef4b4159a64b82b58dd737c: 85
     e82d424dda9a84b5ab66437c71803249: 63
@@ -129,46 +170,6 @@ AudioMixerEffectController:
     m_GUID: 83cd69111ade0442eb42f93dbbd2749e
   - m_ParameterName: LF Reference
     m_GUID: ed0fd3918ac7f41a9802b72e2dc023e8
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
---- !u!244 &4270249605098120319
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: 580478d32b53d467a8a05cd98c764b12
-  m_EffectName: Chords_Bassdemo
-  m_MixLevel: 1316ad310e8b5473388c071aaefb4feb
-  m_Parameters:
-  - m_ParameterName: 'Instance Index '
-    m_GUID: 4c7bc2c280283479da714f33ecf64d31
-  - m_ParameterName: bassvol
-    m_GUID: 4828b17810b00477abc60b4d45033fe3
-  - m_ParameterName: chord1spawnrate
-    m_GUID: e82d424dda9a84b5ab66437c71803249
-  - m_ParameterName: chord1oct
-    m_GUID: f10cf1ed9a687458397aac3fb357027b
-  - m_ParameterName: chord1voicevol
-    m_GUID: 2d04a684e93804fc59226e1e304b66da
-  - m_ParameterName: chord1att
-    m_GUID: 4d3bf28c20a4e48d595a2a79a982f5fa
-  - m_ParameterName: chord1dec
-    m_GUID: 8c16c91c16273419eac14d8e8fdb12f3
-  - m_ParameterName: verbsize
-    m_GUID: a39533a0c14684eaea52a0ffb42809dd
-  - m_ParameterName: verbdecaytime
-    m_GUID: 6fcd15063aa9c41a697b4b3638c34963
-  - m_ParameterName: verbhfdamp
-    m_GUID: 6de9eeed6c664435da470c2a082ee31f
-  - m_ParameterName: chord1sus
-    m_GUID: 042bc1b00803948bd830d8123084d6c8
-  - m_ParameterName: verbdiffusion
-    m_GUID: 7c0668d32f8184ecd87958d8971d623f
-  - m_ParameterName: chord1rel
-    m_GUID: cc094968f8a564b8c8254fb860bbef97
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
