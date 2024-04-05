@@ -10,6 +10,7 @@ public class BambooSeedInteraction : MonoBehaviour
     private bool isPushing = false;
     private float pushStartTime;
     private Rigidbody seedRigidbody;
+    public float torqueMagnitude = 500f;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class BambooSeedInteraction : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         if (isPushing)
         {
             if (Time.time - pushStartTime >= sinkDuration)
@@ -34,7 +36,7 @@ public class BambooSeedInteraction : MonoBehaviour
             isPushing = true;
             pushStartTime = Time.time;
             Vector3 dir = transform.position - plantBuddy.position;
-            PushSeed(new Vector3(dir.x, -0.5f, dir.z));
+            PushSeed(new Vector3(dir.x, 0f, dir.z));
         }
     }
 
@@ -54,7 +56,6 @@ public class BambooSeedInteraction : MonoBehaviour
 
     private IEnumerator GrowPlantCoroutine(GameObject plant)
     {
-        Debug.Log("good");
         float elapsedTime = 0f;
         Vector3 initialScale = plant.transform.localScale;
         Vector3 targetScale = new Vector3(2000f, 3000f, 2000f);
@@ -74,5 +75,6 @@ public class BambooSeedInteraction : MonoBehaviour
     public void PushSeed(Vector3 direction)
     {
         seedRigidbody.MovePosition(transform.position + direction * pushForce * Time.deltaTime);
+        seedRigidbody.AddTorque((plantBuddy.transform.position - transform.position) * torqueMagnitude);
     }
 }
