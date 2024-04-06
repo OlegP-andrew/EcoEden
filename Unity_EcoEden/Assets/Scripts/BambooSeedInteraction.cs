@@ -4,7 +4,7 @@ using System.Collections;
 public class BambooSeedInteraction : MonoBehaviour
 {
     public GameObject plantPrefab;
-    public float pushForce = 10f;
+    public float pushForce = 5f;
     public float sinkDuration = 0.6f;
     public Transform plantBuddy;
     private bool isPushing = false;
