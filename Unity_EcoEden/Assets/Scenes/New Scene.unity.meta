@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 527c301078608724fa9d4b0a9704b3d6
+<<<<<<<< HEAD:Unity_EcoEden/Assets/Scenes/New Scene.unity.meta
+guid: 8af1c96ef7cf68c4c812374dd3253ed3
+========
+guid: e0b7973d9551c5246a559fd1a317e004
+>>>>>>>> adelinedev:Unity_EcoEden/Assets/Scenes/StartScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
