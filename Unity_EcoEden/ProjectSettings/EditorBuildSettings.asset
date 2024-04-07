@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartScene.unity
-    guid: e0b7973d9551c5246a559fd1a317e004
-  - enabled: 1
     path: Assets/Scenes/BambooScene.unity
     guid: 41a5ba1094af9544181e108d7ede423e
   m_configObjects: {}

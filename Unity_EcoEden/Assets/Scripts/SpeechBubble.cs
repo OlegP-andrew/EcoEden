@@ -50,17 +50,13 @@ public class SpeechBubble : MonoBehaviour
     {
         while (true)
         {
-            if (lines.Count != 0)
-            {
-                panel.SetActive(true);
-                ShowLine();
-                yield return new WaitForSeconds(4);
-
-                txt.text = "";
-                RemoveLine();
-                panel.SetActive(false);
-                yield return new WaitForSeconds(5);
-            }
+            panel.SetActive(true);
+            ShowLine();
+            yield return new WaitForSeconds(4);
+            txt.text = "";
+            RemoveLine();
+            panel.SetActive(false);
+            yield return new WaitForSeconds(5);
         }
     }
 }
