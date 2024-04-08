@@ -12,7 +12,7 @@ public class Shatter : MonoBehaviour
     public GameObject piecesRoot;
     public GameObject brokenCrystal;
 
-    public float explosionForce = 30f;
+    public float explosionForce = 100f;
 
     void Start()
     {
@@ -33,8 +33,6 @@ public class Shatter : MonoBehaviour
 
     void ShatterOnSprint()
     {
-        brokenCrystal.SetActive(true);
-
         MeshRenderer rend = GetComponent<MeshRenderer>();
         if (rend != null) Destroy(rend);
 
@@ -43,13 +41,14 @@ public class Shatter : MonoBehaviour
 
     void ExplodeFragments(Vector3 center)
     {
+        brokenCrystal.SetActive(true);
         anim.SetBool("break", true);
         
         piecesRoot.SetActive(true);
 
-        // foreach (GameObject piece in pieces)
-        // {
-        //     piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, center, 10f);
-        // }
+        foreach (GameObject piece in pieces)
+        {
+            piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, center, 50f, -1f);
+        }
     }
 }
