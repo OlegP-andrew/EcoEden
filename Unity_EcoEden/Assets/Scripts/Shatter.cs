@@ -41,14 +41,14 @@ public class Shatter : MonoBehaviour
 
     void ExplodeFragments(Vector3 center)
     {
-        brokenCrystal.SetActive(true);
         anim.SetBool("break", true);
+        brokenCrystal.SetActive(true);
         
         piecesRoot.SetActive(true);
 
         foreach (GameObject piece in pieces)
         {
-            piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, center, 50f, -1f);
+            piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, center, 50f);
         }
     }
 }
