@@ -160,10 +160,10 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 99ae450e12414fb47813ccef85567012, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4cbae8a72ed04974f8a7692566e7bffe, type: 2}
+      objectReference: {fileID: 2100000, guid: f9ab4dc5c33510840a5e7682c0aaea6f, type: 2}
     - target: {fileID: 919132149155446097, guid: 99ae450e12414fb47813ccef85567012, type: 3}
       propertyPath: m_Name
-      value: crystal1 (5)
+      value: crystalorig
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
