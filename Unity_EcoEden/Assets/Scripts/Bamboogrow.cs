@@ -4,24 +4,12 @@ using UnityEngine;
 
 public class BambooGrow : MonoBehaviour
 {
-    public GameObject bamboo;
-    public bool seed = false;
-
     private void OnTriggerEnter(Collider collision)
     {
+        Debug.Log("good");
         if (collision.gameObject.tag == "Seed")
         {
-            seed = true;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (seed)
-        {
-            Debug.Log("good");
-            bamboo.GetComponent<Animator>().SetTrigger("grow");
+            GetComponent<Animator>().SetTrigger("grow");
         }
     }
 }

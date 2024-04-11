@@ -7,7 +7,7 @@ public class SpeechBubble : MonoBehaviour
 {
     public Transform cam;
     public ChatGPTManager chatGPTManager;
-    private List<Line> lines = new List<Line>();
+    public List<Line> lines = new List<Line>();
     public TextMeshProUGUI txt;
     public GameObject panel;
 
@@ -61,7 +61,9 @@ public class SpeechBubble : MonoBehaviour
                 panel.SetActive(false);
                 yield return new WaitForSeconds(5);
             }
+            else yield return null;
         }
+        
     }
 }
 
