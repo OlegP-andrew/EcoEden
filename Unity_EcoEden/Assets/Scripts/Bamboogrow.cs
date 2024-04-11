@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class BambooGrow : MonoBehaviour
 {
+    public GameObject bamboo;
+
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("good");
         if (collision.gameObject.tag == "Seed")
         {
-            GetComponent<Animator>().SetTrigger("grow");
+            bamboo.GetComponent<Animator>().SetTrigger("grow");
         }
     }
 }
