@@ -35,6 +35,7 @@ public class Shatter : MonoBehaviour
     {
         MeshRenderer rend = GetComponent<MeshRenderer>();
         if (rend != null) Destroy(rend);
+        else return;
 
         ExplodeFragments(transform.position);
     }
