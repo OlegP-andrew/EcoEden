@@ -3640,6 +3640,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 742518523622471128, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 021873f81c47a49f8b74056940da9fac, type: 2}
+    - target: {fileID: 1460887635801469809, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 021873f81c47a49f8b74056940da9fac, type: 2}
     - target: {fileID: 2087660767966080763, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 100000
@@ -3648,10 +3656,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 238.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2558182992047716220, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 021873f81c47a49f8b74056940da9fac, type: 2}
+    - target: {fileID: 2615547827199729742, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 021873f81c47a49f8b74056940da9fac, type: 2}
     - target: {fileID: 3673074884512185197, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 100000
       objectReference: {fileID: 0}
+    - target: {fileID: 4204698796807945159, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 021873f81c47a49f8b74056940da9fac, type: 2}
     - target: {fileID: 4703582684025575476, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 79.9
@@ -3692,6 +3712,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5039970318557996147, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 021873f81c47a49f8b74056940da9fac, type: 2}
     - target: {fileID: 6194969746623235548, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
       propertyPath: m_Name
       value: FogBambooScene
