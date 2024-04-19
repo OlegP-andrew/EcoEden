@@ -290,6 +290,8 @@ namespace StarterAssets
         {
             if (Grounded || jumpCounter != 2)
             {
+                Debug.Log("good");
+                
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
 

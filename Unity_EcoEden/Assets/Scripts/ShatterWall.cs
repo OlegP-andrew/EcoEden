@@ -1,23 +1,14 @@
 using UnityEngine;
 using StarterAssets;
+using System.Collections;
 using System.Collections.Generic;
 
-public class Shatter : MonoBehaviour
+public class ShatterWall : MonoBehaviour
 {
-    Animator anim;
     public ThirdPersonController playerController;
     public int requiredCollisions = 3;
     private int collisionsCount = 0;
-    public List<GameObject> pieces = new List<GameObject>();
     public GameObject piecesRoot;
-    public GameObject brokenCrystal;
-
-    public float explosionForce;
-
-    void Start()
-    {
-        anim = gameObject.GetComponent<Animator>();
-    }
 
     void OnCollisionEnter(Collision collision)
     {
@@ -34,22 +25,18 @@ public class Shatter : MonoBehaviour
     void ShatterOnSprint()
     {
         MeshRenderer rend = GetComponent<MeshRenderer>();
+        BoxCollider boxCollider = GetComponent<BoxCollider>();
         if (rend != null) Destroy(rend);
-        else return;
+        if (boxCollider != null) Destroy(boxCollider);
 
-        ExplodeFragments(transform.position);
-    }
-
-    void ExplodeFragments(Vector3 center)
-    {
-        anim.SetBool("break", true);
-        brokenCrystal.SetActive(true);
-        
         piecesRoot.SetActive(true);
 
-        foreach (GameObject piece in pieces)
-        {
-            piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, center, 50f);
-        }
+        // StartCoroutine(PiecesDisappear());
+    }
+
+    private IEnumerator PiecesDisappear()
+    {
+        yield return new WaitForSeconds(4.0f);
+        Destroy(piecesRoot);
     }
 }
