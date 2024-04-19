@@ -19,7 +19,6 @@ public class Interactor : MonoBehaviour
         }
         itr.action.Enable();
         itr.action.performed += Inter;
-        Debug.Log(listing.Count);
     }
 
     // Update is called once per frame
@@ -33,7 +32,6 @@ public class Interactor : MonoBehaviour
             Transform potentialTarget = i.GetComponentInParent<Transform>();
             Vector3 directionToTarget = potentialTarget.position - currentPosition;
             float dSqrToTarget = directionToTarget.sqrMagnitude;
-            Debug.Log(dSqrToTarget);
             if(dSqrToTarget < closestDistanceSqr)
             {
                 closestDistanceSqr = dSqrToTarget;
@@ -45,8 +43,6 @@ public class Interactor : MonoBehaviour
         {
             current = null;
         }
-        Debug.Log(current);
-
     }
 
     void Inter(InputAction.CallbackContext context)
