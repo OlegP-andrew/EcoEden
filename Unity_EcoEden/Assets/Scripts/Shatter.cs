@@ -12,7 +12,7 @@ public class Shatter : MonoBehaviour
     public GameObject piecesRoot;
     public GameObject brokenCrystal;
 
-    public float explosionForce = 100f;
+    public float explosionForce;
 
     void Start()
     {
