@@ -74,6 +74,7 @@ namespace StarterAssets
         public float CameraAngleOverride = 0.0f;
 
         public bool isSprinting;
+        public bool isDriving;
 
         // cinemachine
         private float _cinemachineTargetYaw;
@@ -227,13 +228,25 @@ namespace StarterAssets
 
             // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
             // if there is no input, set the target speed to 0
-            if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+            if (_input.move == Vector2.zero)
+            {
+                targetSpeed = 0.0f;
+                isDriving = false;
+            } else
+            {
+                isDriving = true;
+            }
 
+            // Update PlantBuddyDriving FMOD Instance
+            SoundManager.S.PlantBuddyDriveUpdate(isDriving, isSprinting);
+            
             // a reference to the players current horizontal velocity
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 
             float speedOffset = 0.1f;
             float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
+
+            //Debug.Log("_input.move" + _input.move + "isDriving =" + isDriving);
 
             // accelerate or decelerate to target speed
             if (currentHorizontalSpeed < targetSpeed - speedOffset ||

@@ -41,14 +41,19 @@ public class Shatter : MonoBehaviour
 
     void ExplodeFragments(Vector3 center)
     {
+
         anim.SetBool("break", true);
         brokenCrystal.SetActive(true);
         
+        SoundManager.S.CrystalShatter(this.gameObject);
+
         piecesRoot.SetActive(true);
 
         foreach (GameObject piece in pieces)
         {
             piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, center, 50f);
         }
+        
+        Debug.Log("Explode Fragements Called");
     }
 }
