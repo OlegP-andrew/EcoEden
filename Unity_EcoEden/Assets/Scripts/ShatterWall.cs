@@ -14,7 +14,7 @@ public class ShatterWall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (playerController._input.sprint)
+            if (playerController.isSprinting)
             {
                 collisionsCount++;
                 if (collisionsCount >= requiredCollisions) ShatterOnSprint();

@@ -7,7 +7,6 @@ TagManager:
   - CinemachineTarget
   - Seed
   - Fog
-  - Terrain
   layers:
   - Default
   - TransparentFX
