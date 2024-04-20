@@ -23,7 +23,7 @@ public class Shatter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (playerController.isSprinting)
+            if (playerController._input.sprint)
             {
                 collisionsCount++;
                 if (collisionsCount >= requiredCollisions) ShatterOnSprint();

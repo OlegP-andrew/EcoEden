@@ -8312,7 +8312,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 0.1
+  JumpHeight: 5
   Gravity: -30
   JumpTimeout: 0
   FallTimeout: 0
@@ -8326,7 +8326,7 @@ MonoBehaviour:
   TopClamp: 70
   BottomClamp: -30
   CameraAngleOverride: 0
-  isSprinting: 0
+  _input: {fileID: 0}
 --- !u!114 &3268090612086271141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8614,7 +8614,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4415172252514909194}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -265.74878}
+  m_LocalPosition: {x: 0, y: 0, z: -245.13098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8622,7 +8622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -464.47372, y: -616.94794}
+  m_AnchoredPosition: {x: -713.2796, y: -528.98486}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &3863388840675626582
@@ -11551,7 +11551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639926411062256557}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6406338, y: 0.20793828, z: -0.22819667, w: 0.7030478}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -24.700985, y: 0.15198612, z: -44.96265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

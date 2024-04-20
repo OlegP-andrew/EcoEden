@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 235370214}
   m_Layer: 0
   m_Name: Terrain_(-79.70, 0.00, -943.70)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1128,7 +1128,7 @@ GameObject:
   - component: {fileID: 243396071}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3562,7 +3562,7 @@ GameObject:
   - component: {fileID: 1036212141}
   m_Layer: 0
   m_Name: terrains
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4940,7 +4940,7 @@ GameObject:
   - component: {fileID: 1325955638}
   m_Layer: 0
   m_Name: Terrain_(-279.70, 0.00, -443.70)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6497,7 +6497,7 @@ GameObject:
   - component: {fileID: 1666583845}
   m_Layer: 0
   m_Name: Terrain_(-279.70, -22.00, -943.70)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -7937,7 +7937,7 @@ GameObject:
   - component: {fileID: 1983740361}
   m_Layer: 0
   m_Name: Terrain_(120.30, 0.00, -443.70)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8996,7 +8996,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 1.53, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8422998132966168223}
@@ -10246,8 +10246,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 100
-  Gravity: -10
+  JumpHeight: 5
+  Gravity: -40
   JumpTimeout: 0
   FallTimeout: 0
   Grounded: 1
@@ -10258,9 +10258,9 @@ MonoBehaviour:
     m_Bits: 1
   CinemachineCameraTarget: {fileID: 1861118425644212045}
   TopClamp: 70
-  BottomClamp: -30
+  BottomClamp: -40
   CameraAngleOverride: 0
-  isSprinting: 0
+  _input: {fileID: 0}
 --- !u!114 &3268090612086271141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10638,7 +10638,7 @@ Transform:
   m_GameObject: {fileID: 2572999932945474819}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0011986677, y: 1.79, z: 0}
+  m_LocalPosition: {x: 0, y: 1.79, z: 0}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11185,13 +11185,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.24
-  m_Radius: 0.31
+  m_Height: 2.07
+  m_Radius: 0.73
   m_SlopeLimit: 45
   m_StepOffset: 0.25
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 1.34, z: 0}
+  m_Center: {x: 0, y: 1.73, z: 0}
 --- !u!1 &4828949568669172875
 GameObject:
   m_ObjectHideFlags: 0
