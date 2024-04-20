@@ -55,7 +55,7 @@ namespace StarterAssets
         public float GroundedOffset = -0.14f;
 
         [Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
-        public float GroundedRadius = 0.28f;
+        public float GroundedRadius = 0.73f;
 
         [Tooltip("What layers the character uses as ground")]
         public LayerMask GroundLayers;
@@ -72,9 +72,6 @@ namespace StarterAssets
 
         [Tooltip("Additional degress to override the camera. Useful for fine tuning camera position when locked")]
         public float CameraAngleOverride = 0.0f;
-
-        public bool isSprinting;
-        public bool isDriving;
 
         // cinemachine
         private float _cinemachineTargetYaw;
@@ -105,7 +102,7 @@ namespace StarterAssets
 #endif
         private Animator _animator;
         private CharacterController _controller;
-        private StarterAssetsInputs _input;
+        public StarterAssetsInputs _input;
         private GameObject _mainCamera;
 
         private const float _threshold = 0.01f;
@@ -180,7 +177,7 @@ namespace StarterAssets
         private void GroundedCheck()
         {
             // set sphere position, with offset
-            Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset,
+            Vector3 spherePosition = new Vector3(transform.position.x, 1.73f - GroundedOffset,
                 transform.position.z);
             Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
                 QueryTriggerInteraction.Ignore);
@@ -220,9 +217,6 @@ namespace StarterAssets
         {
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
-
-            // set isSprinting bool
-            isSprinting = _input.sprint ? true : false;
 
             // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -301,10 +295,8 @@ namespace StarterAssets
 
         private void JumpAndGravity()
         {
-            if (Grounded || jumpCounter != 2)
+            if (Grounded && jumpCounter <= 2)
             {
-                Debug.Log("good");
-                
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
 
@@ -332,10 +324,10 @@ namespace StarterAssets
                     {
                         _animator.SetBool(_animIDJump, true);
                     }
-                }
 
-                // Set jump counter
-                jumpCounter += 1;
+                    // Set jump counter
+                    jumpCounter += 1;
+                }
 
                 // jump timeout
                 if (_jumpTimeoutDelta >= 0.0f)
