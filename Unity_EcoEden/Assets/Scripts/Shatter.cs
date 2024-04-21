@@ -47,7 +47,7 @@ public class Shatter : MonoBehaviour
         anim.SetBool("break", true);
         brokenCrystal.SetActive(true);
         
-        // SoundManager.S.CrystalShatter(this.gameObject);
+        SoundManager.S.CrystalShatter(this.gameObject);
 
         piecesRoot.SetActive(true);
 
