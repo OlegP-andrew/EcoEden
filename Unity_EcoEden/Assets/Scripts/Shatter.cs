@@ -23,7 +23,6 @@ public class Shatter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("good");
             if (playerController._input.sprint)
             {
                 collisionsCount++;
@@ -47,7 +46,7 @@ public class Shatter : MonoBehaviour
         anim.SetBool("break", true);
         brokenCrystal.SetActive(true);
         
-        // SoundManager.S.CrystalShatter(this.gameObject);
+        SoundManager.S.CrystalShatter(this.gameObject);
 
         piecesRoot.SetActive(true);
 

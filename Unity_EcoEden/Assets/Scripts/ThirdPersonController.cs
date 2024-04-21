@@ -234,7 +234,7 @@ namespace StarterAssets
             }
 
             // Update PlantBuddyDriving FMOD Instance
-            // SoundManager.S.PlantBuddyDriveUpdate(isDriving, isSprinting);
+            SoundManager.S.PlantBuddyDriveUpdate(isDriving, isSprinting);
             
             // a reference to the players current horizontal velocity
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
