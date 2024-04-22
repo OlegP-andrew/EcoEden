@@ -20,8 +20,6 @@ namespace StarterAssets
 
         [Tooltip("Sprint speed of the character in m/s")]
         public float SprintSpeed = 5.335f;
-        public bool isSprinting;
-        public bool isDriving;
         public bool LockCameraPosition = false;
 
         [Tooltip("How fast the character turns to face movement direction")]
@@ -57,7 +55,7 @@ namespace StarterAssets
         public float GroundedOffset = -0.14f;
 
         [Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
-        public float GroundedRadius = 0.73f;
+        public float GroundedRadius = 0.28f;
 
         [Tooltip("What layers the character uses as ground")]
         public LayerMask GroundLayers;
@@ -74,6 +72,8 @@ namespace StarterAssets
 
         [Tooltip("Additional degress to override the camera. Useful for fine tuning camera position when locked")]
         public float CameraAngleOverride = 0.0f;
+
+        public bool isSprinting;
 
         // cinemachine
         private float _cinemachineTargetYaw;
@@ -104,7 +104,7 @@ namespace StarterAssets
 #endif
         private Animator _animator;
         private CharacterController _controller;
-        public StarterAssetsInputs _input;
+        private StarterAssetsInputs _input;
         private GameObject _mainCamera;
 
         private const float _threshold = 0.01f;
@@ -179,7 +179,7 @@ namespace StarterAssets
         private void GroundedCheck()
         {
             // set sphere position, with offset
-            Vector3 spherePosition = new Vector3(transform.position.x, 1.73f - GroundedOffset,
+            Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset,
                 transform.position.z);
             Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
                 QueryTriggerInteraction.Ignore);
@@ -220,29 +220,20 @@ namespace StarterAssets
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
+            // set isSprinting bool
+            isSprinting = _input.sprint ? true : false;
+
             // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
             // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
             // if there is no input, set the target speed to 0
-            if (_input.move == Vector2.zero)
-            {
-                targetSpeed = 0.0f;
-                isDriving = false;
-            } else
-            {
-                isDriving = true;
-            }
+            if (_input.move == Vector2.zero) targetSpeed = 0.0f;
 
-            // Update PlantBuddyDriving FMOD Instance
-            SoundManager.S.PlantBuddyDriveUpdate(isDriving, isSprinting);
-            
             // a reference to the players current horizontal velocity
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 
             float speedOffset = 0.1f;
             float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
-
-            //Debug.Log("_input.move" + _input.move + "isDriving =" + isDriving);
 
             // accelerate or decelerate to target speed
             if (currentHorizontalSpeed < targetSpeed - speedOffset ||
@@ -297,7 +288,7 @@ namespace StarterAssets
 
         private void JumpAndGravity()
         {
-            if (Grounded && jumpCounter <= 2)
+            if (Grounded || jumpCounter != 2)
             {
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
@@ -326,10 +317,10 @@ namespace StarterAssets
                     {
                         _animator.SetBool(_animIDJump, true);
                     }
-
-                    // Set jump counter
-                    jumpCounter += 1;
                 }
+
+                // Set jump counter
+                jumpCounter += 1;
 
                 // jump timeout
                 if (_jumpTimeoutDelta >= 0.0f)
