@@ -23,7 +23,7 @@ public class Shatter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (playerController.isSprinting)
+            if (playerController._input.sprint)
             {
                 collisionsCount++;
                 if (collisionsCount >= requiredCollisions) ShatterOnSprint();
@@ -35,20 +35,26 @@ public class Shatter : MonoBehaviour
     {
         MeshRenderer rend = GetComponent<MeshRenderer>();
         if (rend != null) Destroy(rend);
+        else return;
 
         ExplodeFragments(transform.position);
     }
 
     void ExplodeFragments(Vector3 center)
     {
+
         anim.SetBool("break", true);
         brokenCrystal.SetActive(true);
         
+        SoundManager.S.CrystalShatter(this.gameObject);
+
         piecesRoot.SetActive(true);
 
         foreach (GameObject piece in pieces)
         {
             piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, center, 50f);
         }
+        
+        Debug.Log("Explode Fragements Called");
     }
 }
