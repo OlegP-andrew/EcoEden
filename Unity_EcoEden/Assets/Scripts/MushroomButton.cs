@@ -29,9 +29,8 @@ public class MushroomButton : IInteractable
         }
     }
 
-    void onCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("hi");
         if (collision.gameObject.tag == "Player")
         {
             Interact();
@@ -39,7 +38,7 @@ public class MushroomButton : IInteractable
         }
     }
 
-    void onCollisionExit(Collision collision)
+    void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {

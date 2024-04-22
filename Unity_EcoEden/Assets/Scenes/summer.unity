@@ -223,6 +223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerAll
       objectReference: {fileID: 0}
+    - target: {fileID: 4330294183790669241, guid: 3078f08194fe9a84a93fae6821f7bcd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4723280703512368238, guid: 3078f08194fe9a84a93fae6821f7bcd0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -539,7 +543,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.3016, y: -6.73, z: 23.97}
-  m_LocalScale: {x: 1.9529868, y: 4.283785, z: 42.88559}
+  m_LocalScale: {x: 1.7383341, y: 4.283785, z: 42.88559}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -797,7 +801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8783983434658135832, guid: 6b01183ea17944e43bce6d61e30a8f6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.16
+      value: -3.3500001
       objectReference: {fileID: 0}
     - target: {fileID: 8783983434658135832, guid: 6b01183ea17944e43bce6d61e30a8f6d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1139,39 +1143,12 @@ Transform:
   m_GameObject: {fileID: 1012041219}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.28, y: -6.73, z: 14.39}
+  m_LocalPosition: {x: 18.33, y: -6.73, z: 14.39}
   m_LocalScale: {x: 1, y: 4.283785, z: 23.907015}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1222430099 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4014579946023538032, guid: 6b01183ea17944e43bce6d61e30a8f6d, type: 3}
-  m_PrefabInstance: {fileID: 1650730719}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1222430102
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222430099}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1492926802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,7 +1343,7 @@ Transform:
   m_GameObject: {fileID: 1539789942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.25, y: -6.73, z: 14.39}
+  m_LocalPosition: {x: -7.64, y: -6.73, z: 14.39}
   m_LocalScale: {x: 1, y: 4.283785, z: 23.907015}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1380,13 +1357,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2738028244374418280, guid: 6b01183ea17944e43bce6d61e30a8f6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8263307931739940258, guid: 6b01183ea17944e43bce6d61e30a8f6d, type: 3}
       propertyPath: m_Name
       value: mushroomwall (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8783983434658135832, guid: 6b01183ea17944e43bce6d61e30a8f6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.25
+      value: -3.44
       objectReference: {fileID: 0}
     - target: {fileID: 8783983434658135832, guid: 6b01183ea17944e43bce6d61e30a8f6d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1431,9 +1412,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8263307931739940258, guid: 6b01183ea17944e43bce6d61e30a8f6d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1769919045}
-    - targetCorrespondingSourceObject: {fileID: 4014579946023538032, guid: 6b01183ea17944e43bce6d61e30a8f6d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1222430102}
   m_SourcePrefab: {fileID: 100100000, guid: 6b01183ea17944e43bce6d61e30a8f6d, type: 3}
 --- !u!1 &1769919042 stripped
 GameObject:
@@ -1555,7 +1533,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.9259, y: -6.73, z: 23.97}
-  m_LocalScale: {x: 1.8335927, y: 4.283785, z: 42.88559}
+  m_LocalScale: {x: 1.696605, y: 4.283785, z: 42.88559}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
