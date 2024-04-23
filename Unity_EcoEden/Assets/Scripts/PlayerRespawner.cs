@@ -9,13 +9,8 @@ public class PlayerRespawner : MonoBehaviour
         initialPosition = transform.position;
     }
 
-    private void Update()
+    public void RespawnPlayer(Vector3 position)
     {
-        //TODO: condition to respawn player
-    }
-
-    public void RespawnPlayer()
-    {
-        transform.position = initialPosition;
+        transform.position = position;
     }
 }

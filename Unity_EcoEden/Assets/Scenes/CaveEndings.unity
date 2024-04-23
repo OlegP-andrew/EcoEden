@@ -669,9 +669,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 969296110}
-    - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 969296109}
   m_SourcePrefab: {fileID: 100100000, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
 --- !u!4 &110430213 stripped
 Transform:
@@ -3133,24 +3130,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
   m_PrefabInstance: {fileID: 110430212}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &969296109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969296105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d05e35295cc6c4a8534c6b936f1ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  requiredCollisions: 3
-  pieces: []
-  piecesRoot: {fileID: 0}
-  brokenCrystal: {fileID: 0}
-  explosionForce: 30
 --- !u!65 &969296110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3214,7 +3193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1004025254}
   - component: {fileID: 1004025255}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Path2Ending
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3229,9 +3208,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004025253}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.84, y: -7.42, z: -3.52}
-  m_LocalScale: {x: 25.193762, y: 1, z: 69.29144}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.840001, y: -7.419999, z: -3.519989}
+  m_LocalScale: {x: 25.193762, y: 1, z: 69.29145}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1774841962}
@@ -3626,9 +3605,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1998023482}
-    - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1998023481}
   m_SourcePrefab: {fileID: 100100000, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
 --- !u!4 &1146142829 stripped
 Transform:
@@ -4290,9 +4266,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1804255703}
-    - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1804255702}
   m_SourcePrefab: {fileID: 100100000, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
 --- !u!4 &1238399123 stripped
 Transform:
@@ -5787,24 +5760,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8809204578927259275, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
   m_PrefabInstance: {fileID: 4865749357542169123}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1636366119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258031323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d05e35295cc6c4a8534c6b936f1ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  requiredCollisions: 3
-  pieces: []
-  piecesRoot: {fileID: 0}
-  brokenCrystal: {fileID: 0}
-  explosionForce: 30
 --- !u!65 &1636366120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6297,6 +6252,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed7d500a0b476145ae4544698ec9e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRespawner: {fileID: 7370929366752827948}
+  player: {fileID: 8838863232810911323}
+  path2Layer:
+    serializedVersion: 2
+    m_Bits: 1024
+  path2: {fileID: 1004025253}
 --- !u!4 &1774841962
 Transform:
   m_ObjectHideFlags: 0
@@ -6458,33 +6419,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1789031868}
-    - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1789031867}
   m_SourcePrefab: {fileID: 100100000, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
 --- !u!4 &1789031863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8809204578927259275, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
   m_PrefabInstance: {fileID: 1789031862}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1789031867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114292601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d05e35295cc6c4a8534c6b936f1ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  requiredCollisions: 3
-  pieces: []
-  piecesRoot: {fileID: 0}
-  brokenCrystal: {fileID: 0}
-  explosionForce: 30
 --- !u!65 &1789031868
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6516,24 +6456,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
   m_PrefabInstance: {fileID: 1238399122}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1804255702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804255698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d05e35295cc6c4a8534c6b936f1ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  requiredCollisions: 3
-  pieces: []
-  piecesRoot: {fileID: 0}
-  brokenCrystal: {fileID: 0}
-  explosionForce: 30
 --- !u!65 &1804255703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7626,33 +7548,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1993461154}
-    - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1993461153}
   m_SourcePrefab: {fileID: 100100000, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
 --- !u!4 &1993461149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8809204578927259275, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
   m_PrefabInstance: {fileID: 1993461148}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1993461153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644000911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d05e35295cc6c4a8534c6b936f1ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  requiredCollisions: 3
-  pieces: []
-  piecesRoot: {fileID: 0}
-  brokenCrystal: {fileID: 0}
-  explosionForce: 30
 --- !u!65 &1993461154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7679,24 +7580,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
   m_PrefabInstance: {fileID: 1146142828}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1998023481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998023477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d05e35295cc6c4a8534c6b936f1ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  requiredCollisions: 3
-  pieces: []
-  piecesRoot: {fileID: 0}
-  brokenCrystal: {fileID: 0}
-  explosionForce: 30
 --- !u!65 &1998023482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8476,15 +8359,15 @@ PrefabInstance:
       objectReference: {fileID: 538819195}
     - target: {fileID: 7958685737306226004, guid: e3b6e0739297f764fa2ee49ad0b0fa33, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -330.37195
+      value: -261.30084
       objectReference: {fileID: 0}
     - target: {fileID: 7958685737306226004, guid: e3b6e0739297f764fa2ee49ad0b0fa33, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -633.0864
+      value: -697.81213
       objectReference: {fileID: 0}
     - target: {fileID: 7958685737306226004, guid: e3b6e0739297f764fa2ee49ad0b0fa33, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -521.806
+      value: -527.7039
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8810,9 +8693,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1636366120}
-    - targetCorrespondingSourceObject: {fileID: 8145679429910426673, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1636366119}
   m_SourcePrefab: {fileID: 100100000, guid: 2bb6840f61fe2274aa5a15bd9851dd5c, type: 3}
 --- !u!1 &4899911942984426703
 GameObject:
@@ -8906,6 +8786,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8245ce58cea19db4db1706eb85692b54, type: 3}
+--- !u!114 &7370929366752827948 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1830461474089178565, guid: e3b6e0739297f764fa2ee49ad0b0fa33, type: 3}
+  m_PrefabInstance: {fileID: 140936555050483011}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2313d617ce81d94b849d4e58cba288a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7389715351932098168
 Transform:
   m_ObjectHideFlags: 0
@@ -9485,6 +9376,11 @@ RotationConstraint:
   m_Sources:
   - sourceTransform: {fileID: 4208778500723181657}
     weight: 1
+--- !u!4 &8838863232810911323 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7663573667257190269, guid: e3b6e0739297f764fa2ee49ad0b0fa33, type: 3}
+  m_PrefabInstance: {fileID: 140936555050483011}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
