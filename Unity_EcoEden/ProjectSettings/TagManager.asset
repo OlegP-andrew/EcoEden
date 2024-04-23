@@ -8,6 +8,7 @@ TagManager:
   - Seed
   - Fog
   - Terrain
+  - Crystal
   layers:
   - Default
   - TransparentFX

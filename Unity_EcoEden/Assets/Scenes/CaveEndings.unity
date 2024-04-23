@@ -8462,6 +8462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 701124289023974310, guid: e3b6e0739297f764fa2ee49ad0b0fa33, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2682277422141266087, guid: e3b6e0739297f764fa2ee49ad0b0fa33, type: 3}
       propertyPath: m_Name
       value: PlayerAllNew
@@ -8472,15 +8476,15 @@ PrefabInstance:
       objectReference: {fileID: 538819195}
     - target: {fileID: 7958685737306226004, guid: e3b6e0739297f764fa2ee49ad0b0fa33, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -313.8642
+      value: -330.37195
       objectReference: {fileID: 0}
     - target: {fileID: 7958685737306226004, guid: e3b6e0739297f764fa2ee49ad0b0fa33, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -648.6795
+      value: -633.0864
       objectReference: {fileID: 0}
     - target: {fileID: 7958685737306226004, guid: e3b6e0739297f764fa2ee49ad0b0fa33, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -523.1763
+      value: -521.806
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8557,7 +8561,7 @@ PositionConstraint:
   m_Enabled: 1
   serializedVersion: 2
   m_Weight: 1
-  m_TranslationAtRest: {x: 101.62001, y: 10.34, z: -79.5}
+  m_TranslationAtRest: {x: 104.72, y: 10.34, z: -90.76}
   m_TranslationOffset: {x: -0.9095764, y: 1.0574265, z: 21.064255}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1

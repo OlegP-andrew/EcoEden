@@ -93,14 +93,20 @@ namespace StarterAssets
         private float _jumpTimeoutDelta;
         private float _fallTimeoutDelta;
 
-        // animation IDs
+        // animator
         public GameObject plantBuddy;
         private Animator _animator;
+
+        // collider parameters
+        private Vector3 originalBoxColliderCenter;
+        private Vector3 originalBoxColliderSize;
+        private Vector3 originalControllerCenter;
         
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
 #endif
         private CharacterController _controller;
+        private BoxCollider _boxCollider;
         public StarterAssetsInputs _input;
         private GameObject _mainCamera;
 
@@ -137,12 +143,18 @@ namespace StarterAssets
             _animator = plantBuddy.GetComponent<Animator>();
             _hasAnimator = _animator != null;
             _controller = GetComponent<CharacterController>();
+            _boxCollider = plantBuddy.GetComponent<BoxCollider>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM 
             _playerInput = GetComponent<PlayerInput>();
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
+
+            // set parameters
+            originalBoxColliderCenter = _boxCollider.center;
+            originalBoxColliderSize = _boxCollider.size;
+            originalControllerCenter = _controller.center;
 
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
@@ -201,10 +213,13 @@ namespace StarterAssets
 
         private void Move()
         {
+            ResetColliders();
+
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
-            // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
+            // set sprinting bool
+            isSprinting = _input.sprint && _input.move != Vector2.zero ? true : false;
 
             // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
             // if there is no input, set the target speed to 0
@@ -273,6 +288,7 @@ namespace StarterAssets
             if (_hasAnimator)
             {
                 _animator.SetBool("walk", _speed > 0f);
+                _animator.SetBool("sprint", isSprinting);
             }
         }
 
@@ -377,6 +393,47 @@ namespace StarterAssets
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
+            }
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Crystal"))
+            {
+                if (isSprinting) _animator.SetTrigger("collide");
+            }
+            if (collision.gameObject.CompareTag("Fog"))
+            {
+                _animator.SetTrigger("collide");
+            }
+        }
+
+        private void ResetColliders()
+        {
+            // set new parameters
+            Vector3 newBoxColliderCenter = originalBoxColliderCenter;
+            newBoxColliderCenter.z = 0.03f;
+            Vector3 newBoxColliderSize = originalBoxColliderSize;
+            newBoxColliderSize.z = 0.07f;
+            Vector3 newControllerCenter = originalControllerCenter;
+            newControllerCenter.z = 0.42f;
+
+            // set collider parameters
+            if (isSprinting)
+            {
+                _boxCollider.size = newBoxColliderSize;
+                _boxCollider.center = newBoxColliderCenter;
+                _controller.center = newControllerCenter;
+                _controller.radius = 0.52f;
+            }
+
+            //set back collider parameters
+            else 
+            {
+                _boxCollider.size = originalBoxColliderSize;
+                _boxCollider.center = originalBoxColliderCenter;
+                _controller.center = originalControllerCenter;
+                _controller.radius = 0.3f;
             }
         }
 
