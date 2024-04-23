@@ -24,6 +24,8 @@ public class ShatterWall : MonoBehaviour
 
     void ShatterOnSprint()
     {
+        SoundManager.S.CrystalShatter(this.gameObject);
+        
         MeshRenderer rend = GetComponent<MeshRenderer>();
         BoxCollider boxCollider = GetComponent<BoxCollider>();
         if (rend != null) Destroy(rend);
@@ -37,6 +39,6 @@ public class ShatterWall : MonoBehaviour
     private IEnumerator PiecesDisappear()
     {
         yield return new WaitForSeconds(4.0f);
-        Destroy(piecesRoot);
+        // play animation
     }
 }

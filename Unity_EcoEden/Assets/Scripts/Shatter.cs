@@ -54,7 +54,5 @@ public class Shatter : MonoBehaviour
         {
             piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, center, 50f);
         }
-        
-        Debug.Log("Explode Fragements Called");
     }
 }

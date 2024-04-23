@@ -1,4 +1,5 @@
 ﻿ using UnityEngine;
+ using System.Collections;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -93,16 +94,12 @@ namespace StarterAssets
         private float _fallTimeoutDelta;
 
         // animation IDs
-        private int _animIDSpeed;
-        private int _animIDGrounded;
-        private int _animIDJump;
-        private int _animIDFreeFall;
-        private int _animIDMotionSpeed;
-
+        public GameObject plantBuddy;
+        private Animator _animator;
+        
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
 #endif
-        private Animator _animator;
         private CharacterController _controller;
         public StarterAssetsInputs _input;
         private GameObject _mainCamera;
@@ -136,8 +133,9 @@ namespace StarterAssets
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
-            _hasAnimator = TryGetComponent(out _animator);
+
+            _animator = plantBuddy.GetComponent<Animator>();
+            _hasAnimator = _animator != null;
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM 
@@ -146,16 +144,17 @@ namespace StarterAssets
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
 
-            AssignAnimationIDs();
-
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            // animate think
+            StartCoroutine(TriggerThinkAnimation());
         }
 
         private void Update()
         {
-            _hasAnimator = TryGetComponent(out _animator);
+            _hasAnimator = _animator != null;
 
             JumpAndGravity();
             GroundedCheck();
@@ -165,15 +164,6 @@ namespace StarterAssets
         private void LateUpdate()
         {
             CameraRotation();
-        }
-
-        private void AssignAnimationIDs()
-        {
-            _animIDSpeed = Animator.StringToHash("Speed");
-            _animIDGrounded = Animator.StringToHash("Grounded");
-            _animIDJump = Animator.StringToHash("Jump");
-            _animIDFreeFall = Animator.StringToHash("FreeFall");
-            _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
         }
 
         private void GroundedCheck()
@@ -186,12 +176,6 @@ namespace StarterAssets
 
             // reset jump counter
             if (Grounded) jumpCounter = 0;
-
-            // update animator if using character
-            if (_hasAnimator)
-            {
-                _animator.SetBool(_animIDGrounded, Grounded);
-            }
         }
 
         private void CameraRotation()
@@ -242,8 +226,6 @@ namespace StarterAssets
             float speedOffset = 0.1f;
             float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
 
-            //Debug.Log("_input.move" + _input.move + "isDriving =" + isDriving);
-
             // accelerate or decelerate to target speed
             if (currentHorizontalSpeed < targetSpeed - speedOffset ||
                 currentHorizontalSpeed > targetSpeed + speedOffset)
@@ -290,8 +272,7 @@ namespace StarterAssets
             // update animator if using character
             if (_hasAnimator)
             {
-                _animator.SetFloat(_animIDSpeed, _animationBlend);
-                _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+                _animator.SetBool("walk", _speed > 0f);
             }
         }
 
@@ -305,8 +286,7 @@ namespace StarterAssets
                 // update animator if using character
                 if (_hasAnimator)
                 {
-                    _animator.SetBool(_animIDJump, false);
-                    _animator.SetBool(_animIDFreeFall, false);
+                    _animator.SetBool("jump", false);
                 }
 
                 // stop our velocity dropping infinitely when grounded
@@ -324,7 +304,7 @@ namespace StarterAssets
                     // update animator if using character
                     if (_hasAnimator)
                     {
-                        _animator.SetBool(_animIDJump, true);
+                        _animator.SetBool("jump", true);
                     }
 
                     // Set jump counter
@@ -346,14 +326,6 @@ namespace StarterAssets
                 if (_fallTimeoutDelta >= 0.0f)
                 {
                     _fallTimeoutDelta -= Time.deltaTime;
-                }
-                else
-                {
-                    // update animator if using character
-                    if (_hasAnimator)
-                    {
-                        _animator.SetBool(_animIDFreeFall, true);
-                    }
                 }
 
                 // if we are not grounded, do not jump
@@ -405,6 +377,28 @@ namespace StarterAssets
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
+            }
+        }
+
+        // IEnumerator to trigger think animation
+        private IEnumerator TriggerThinkAnimation()
+        {
+            while (true)
+            {
+                if (_hasAnimator)
+                {
+                    // wait for a random period between 2 and 4 seconds
+                    yield return new WaitForSeconds(Random.Range(3f, 5f));
+
+                    // set trigger
+                    _animator.SetTrigger("random");
+
+                    // wait for current animation to finish
+                    yield return new WaitForSeconds(3f);
+                }
+
+                // stop animation
+                else yield return null;
             }
         }
     }
