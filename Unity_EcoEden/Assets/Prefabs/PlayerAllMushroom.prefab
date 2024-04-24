@@ -380,6 +380,7 @@ MonoBehaviour:
   TopClamp: 70
   BottomClamp: -40
   CameraAngleOverride: 0
+  plantBuddy: {fileID: 0}
   _input: {fileID: 0}
 --- !u!114 &8484534535584206632
 MonoBehaviour:
@@ -541,6 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2313d617ce81d94b849d4e58cba288a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAll: {fileID: 233982151326280711}
 --- !u!1 &892464840419463895
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +570,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892464840419463895}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -238.71515}
+  m_LocalPosition: {x: 0, y: 0, z: -654.82324}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -576,7 +578,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -719.8242, y: -529.36426}
+  m_AnchoredPosition: {x: -906.2041, y: -529.76166}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!20 &4792129932551839397
@@ -3680,7 +3682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 136060544013587014, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
-      value: 0.46606445
+      value: 0.46607208
       objectReference: {fileID: 0}
     - target: {fileID: 136060544013587014, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].y
@@ -3756,7 +3758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671750550001352170, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
-      value: -0.04332733
+      value: -0.043323517
       objectReference: {fileID: 0}
     - target: {fileID: 1671750550001352170, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].y
@@ -3764,7 +3766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671750550001352170, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].z
-      value: 0.012260437
+      value: 0.012268066
       objectReference: {fileID: 0}
     - target: {fileID: 1761852623086061303, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_Layer
@@ -3888,11 +3890,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4393255669111140743, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.013799949
+      value: 0.01379979
       objectReference: {fileID: 0}
     - target: {fileID: 4393255669111140743, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000000079241744
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4393255669111140743, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3980,7 +3982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6278605377703537956, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
-      value: -0.37068176
+      value: -0.37067795
       objectReference: {fileID: 0}
     - target: {fileID: 6278605377703537956, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].y
@@ -3988,7 +3990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6278605377703537956, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].z
-      value: 0.028953552
+      value: 0.028961182
       objectReference: {fileID: 0}
     - target: {fileID: 6324566798994078368, guid: dfbe46d87ebcd4549bb232b916848874, type: 3}
       propertyPath: m_Layer

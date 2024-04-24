@@ -288,6 +288,7 @@ namespace StarterAssets
             if (_hasAnimator)
             {
                 _animator.SetBool("walk", _speed > 0f);
+                _animator.SetBool("recover", _speed > 0f);
                 _animator.SetBool("sprint", isSprinting);
             }
         }

@@ -42,7 +42,6 @@ public class Shatter : MonoBehaviour
 
     void ExplodeFragments(Vector3 center)
     {
-
         anim.SetBool("break", true);
         brokenCrystal.SetActive(true);
         
