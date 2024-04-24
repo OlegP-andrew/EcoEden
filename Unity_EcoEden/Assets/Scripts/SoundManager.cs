@@ -97,6 +97,5 @@ public class SoundManager : MonoBehaviour
     public void CrystalShatter(GameObject brokenCrystal)
     {
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/CaveScene/CrystalShatter", brokenCrystal);
-        Debug.Log("CrystalShatter Called");
     }
 }

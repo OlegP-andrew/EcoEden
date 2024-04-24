@@ -37,14 +37,17 @@ public class EndingManager : MonoBehaviour
 
     private IEnumerator PlayPath1Ending()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(20f);
         path1Animator.SetTrigger("play");
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         plantBuddyAnim.SetTrigger("afraid");
 
         yield return new WaitForSeconds(5f);
         playerRespawner.RespawnPlayer(respawnPosition);
+
+        yield return new WaitForSeconds(1f);
+        plantBuddyAnim.SetTrigger("recover");
     }
 
     private IEnumerator PlayPath2Ending()
@@ -57,5 +60,8 @@ public class EndingManager : MonoBehaviour
 
         yield return new WaitForSeconds(5f);
         playerRespawner.RespawnPlayer(respawnPosition);
+
+        yield return new WaitForSeconds(1f);
+        plantBuddyAnim.SetTrigger("recover");
     }
 }
