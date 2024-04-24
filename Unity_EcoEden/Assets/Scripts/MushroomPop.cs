@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MushroomButton : IInteractable
+public class MushroomPop : MonoBehaviour
 {
-
+    public bool toggled = false;
     [SerializeField]
     public GameObject[] toggles;
     Animator m_Animator;
@@ -12,6 +12,10 @@ public class MushroomButton : IInteractable
     void Start()
     {
         m_Animator = gameObject.transform.parent.GetComponent<Animator>();
+        if (toggled)
+        {
+            m_Animator.SetBool("sink", true);
+        }
     }
 
     // Update is called once per frame
@@ -20,30 +24,27 @@ public class MushroomButton : IInteractable
         
     }
 
-    public override void Interact()
-    {
-        foreach (GameObject i in toggles)
-        {
-            MushroomWall j = i.GetComponent<MushroomWall>();
-            j.Toggle(); 
-        }
-    }
-
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "PlayerBod")
         {
             Interact();
-            m_Animator.SetBool("press", true);
+            m_Animator.SetBool("sink", true);
         }
     }
 
-    void OnCollisionExit(Collision collision)
+    public void Interact()
     {
-        if (collision.gameObject.tag == "PlayerBod")
+        foreach (GameObject i in toggles)
         {
-            m_Animator.SetBool("press", false);
+            MushroomPop j = i.GetComponent<MushroomPop>();
+            j.Toggle(); 
         }
+    }
+
+    public void Toggle()
+    {
+        m_Animator.SetBool("sink", false);
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Seed
   - Fog
   - Terrain
+  - PlayerBod
   layers:
   - Default
   - TransparentFX
