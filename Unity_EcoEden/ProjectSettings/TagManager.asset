@@ -8,6 +8,7 @@ TagManager:
   - Seed
   - Fog
   - Terrain
+  - PlayerBod
   - Crystal
   layers:
   - Default

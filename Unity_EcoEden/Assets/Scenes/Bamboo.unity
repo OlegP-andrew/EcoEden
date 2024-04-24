@@ -1561,6 +1561,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 48.705
       objectReference: {fileID: 0}
+    - target: {fileID: 6614520047936525473, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6eb4b584766c2074fb509192cb57c905, type: 2}
     - target: {fileID: 7870572044080835067, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}
       propertyPath: m_Drag
       value: 10
@@ -5159,6 +5163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FogBambooScene
       objectReference: {fileID: 0}
+    - target: {fileID: 6194969746623235548, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7409019512940082089, guid: 7ff5d1b5f71556d4f8d3bb82ecd7eb36, type: 3}
@@ -5525,7 +5533,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153491511780739502}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 392.95172}
+  m_LocalPosition: {x: 0, y: 0, z: 540.66846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5533,7 +5541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -651.3614, y: -596.962}
+  m_AnchoredPosition: {x: -669.72504, y: -562.6246}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1954810917864080304
@@ -6042,6 +6050,7 @@ GameObject:
   - component: {fileID: 4801930893499298185}
   - component: {fileID: 8570019250068734904}
   - component: {fileID: 737953465892507801}
+  - component: {fileID: 8570019250068734905}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9695,6 +9704,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2771057383556675946}
   m_Enabled: 1
+--- !u!114 &8570019250068734905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2771057383556675946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0439e80979007455e8482d3008a370c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8638488890670919636
 Transform:
   m_ObjectHideFlags: 0

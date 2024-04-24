@@ -25,13 +25,14 @@ public class MushroomButton : IInteractable
         foreach (GameObject i in toggles)
         {
             MushroomWall j = i.GetComponent<MushroomWall>();
-            j.Toggle();
+            j.Toggle(); 
         }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.tag == "PlayerBod")
         {
             Interact();
             m_Animator.SetBool("press", true);
@@ -40,7 +41,7 @@ public class MushroomButton : IInteractable
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerBod")
         {
             m_Animator.SetBool("press", false);
         }
