@@ -9,6 +9,7 @@ TagManager:
   - Fog
   - Terrain
   - PlayerBod
+  - Crystal
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - MinimapNonRender
   - CrystalWall
   - Crystal
-  - 
+  - CavePath2
   - 
   - 
   - 

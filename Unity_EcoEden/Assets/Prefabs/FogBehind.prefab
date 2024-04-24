@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 856293434689226795}
   - component: {fileID: 5667272048389277252}
   - component: {fileID: 5986548027094585391}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FogBehind
   m_TagString: Fog
   m_Icon: {fileID: 0}
@@ -4918,6 +4918,10 @@ PrefabInstance:
     - target: {fileID: 1520877707271723275, guid: 45d3b433da9958248b5ac13090f9a134, type: 3}
       propertyPath: m_Name
       value: FogBottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520877707271723275, guid: 45d3b433da9958248b5ac13090f9a134, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1520877707271723275, guid: 45d3b433da9958248b5ac13090f9a134, type: 3}
       propertyPath: m_IsActive
