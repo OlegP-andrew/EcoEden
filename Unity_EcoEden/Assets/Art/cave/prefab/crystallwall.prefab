@@ -3776,14 +3776,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
+  endingManager: {fileID: 0}
   requiredCollisions: 3
   piecesRoot: {fileID: 419935851618953072}
-  pieces:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  explosionForce: 1000
 --- !u!4 &3391332609091489328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ba0b7b37a2c34a42aa80cbf7d6e7b10, type: 3}
