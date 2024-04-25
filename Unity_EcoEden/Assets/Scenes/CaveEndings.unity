@@ -7409,7 +7409,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.003128794, z: -0, w: 0.9999952}
   m_LocalPosition: {x: -84.1, y: -26.5, z: -315.5}
-  m_LocalScale: {x: 206.82962, y: 41.95481, z: 525.98926}
+  m_LocalScale: {x: 206.82962, y: 41.95481, z: 532.82715}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1271178563}
