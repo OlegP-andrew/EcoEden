@@ -88,7 +88,6 @@ namespace StarterAssets
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
         private int jumpCounter = 0;
-        private bool keyDown;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -220,8 +219,7 @@ namespace StarterAssets
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
             // set sprinting bool
-            if (_input.sprint && _input.move != Vector2.zero) isSprinting = true;
-            // isSprinting = _input.sprint && _input.move != Vector2.zero ? true : false;
+            isSprinting = _input.sprint && _input.move != Vector2.zero ? true : false;
 
             // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
             // if there is no input, set the target speed to 0
@@ -290,16 +288,7 @@ namespace StarterAssets
             if (_hasAnimator)
             {
                 _animator.SetBool("walk", _speed > 0f);
-                if (Input.GetKeyDown(KeyCode.LeftShift) && _input.move != Vector2.zero) 
-                {
-                    _animator.ResetTrigger("sprintend");
-                    _animator.SetTrigger("sprint");
-                }
-                if (Input.GetKeyUp(KeyCode.LeftShift) || _input.move == Vector2.zero) 
-                {
-                    _animator.SetTrigger("sprintend");
-                    StartCoroutine(WaitSprintEnd());
-                }
+                _animator.SetBool("sprint", isSprinting);
             }
         }
 
@@ -411,16 +400,10 @@ namespace StarterAssets
         {
             if (collision.gameObject.CompareTag("Crystal"))
             {
-                if (isSprinting) 
-                {
-                    _animator.SetTrigger("collide");
-                    // Debug.Log("good");
-                }
+                if (isSprinting) _animator.SetTrigger("collide");
             }
-
             if (collision.gameObject.CompareTag("Fog"))
             {
-                Debug.Log("good");
                 _animator.SetTrigger("collide");
             }
         }
@@ -452,12 +435,6 @@ namespace StarterAssets
                 _controller.center = originalControllerCenter;
                 _controller.radius = 0.3f;
             }
-        }
-
-        private IEnumerator WaitSprintEnd()
-        {
-            yield return new WaitForSeconds(0.5f);
-            isSprinting = false;
         }
 
         // IEnumerator to trigger think animation
