@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
 
     // Ambiences
     private FMOD.Studio.EventInstance caveAmbience;
+    private FMOD.Studio.EventInstance bambooAmbience;
     
     // Plant Buddy
     private FMOD.Studio.EventInstance plantBuddyDriving;
@@ -19,6 +20,9 @@ public class SoundManager : MonoBehaviour
     // Variables
     private int drive;
     private int sprint;
+
+    public int gamestate;
+    public int surfaceMaterial;
 
     private void Awake()
     {
@@ -33,8 +37,9 @@ public class SoundManager : MonoBehaviour
         plantBuddyDriving.start();
 
         caveAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/CaveScene/CaveAmbience");
-        StartAmbience(3);
-
+        bambooAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/BambooScene/BambooAmbience");
+        
+        StartAmbience(gamestate);
     }
 
     // Update is called once per frame
@@ -75,14 +80,15 @@ public class SoundManager : MonoBehaviour
     }
     
     // Ambience 
-
     public void StartAmbience(int gameState)
     {
         switch (gameState)
         {
             case 1:
+                bambooAmbience.start();
                 break;
             case 2:
+                bambooAmbience.stop(STOP_MODE.ALLOWFADEOUT);
                 break;
             case 3:
                 caveAmbience.start();
@@ -91,6 +97,19 @@ public class SoundManager : MonoBehaviour
                 caveAmbience.stop(STOP_MODE.ALLOWFADEOUT);
                 break;
         }
+    }
+    
+    // Bamboo Scene
+
+    public void CactusTentacles(GameObject cactus)
+    {
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/BambooScene/CactusTentacles", cactus);
+    }
+    
+    public void BambooGrow(GameObject bamboo)
+    {
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/BambooScene/BambooGrow", bamboo);
+        Debug.Log("BambooGrowCalled");
     }
     
     // Cave Scene
