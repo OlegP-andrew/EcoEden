@@ -20,6 +20,7 @@ public class treemaze : MonoBehaviour
         if (interval == 0)
         {
             GetComponent<Animator>().SetTrigger("switch");
+            SoundManager.S.CactusTentacles(this.gameObject);
             interval = Random.Range(min, max);
         }
     }
