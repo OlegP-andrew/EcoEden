@@ -10,6 +10,7 @@ public class MushroomWall : MonoBehaviour
     void Start()
     {
         m_Animator = gameObject.GetComponent<Animator>();
+        m_Animator.SetBool("open", toggled);
     }
 
     // Update is called once per frame
@@ -20,12 +21,7 @@ public class MushroomWall : MonoBehaviour
 
     public void Toggle()
     {
-        if (toggled){
-            m_Animator.SetBool("open", false);
-        }
-        else {
-            m_Animator.SetBool("open", true);
-        }
         toggled = !toggled;
+        m_Animator.SetBool("open", toggled);
     }
 }
