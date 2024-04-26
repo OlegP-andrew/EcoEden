@@ -22,6 +22,7 @@ public class SoundManager : MonoBehaviour
     private int sprint;
 
     public int gamestate;
+    public int surfaceMaterial;
 
     private void Awake()
     {
@@ -39,7 +40,6 @@ public class SoundManager : MonoBehaviour
         bambooAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/BambooScene/BambooAmbience");
         
         StartAmbience(gamestate);
-
     }
 
     // Update is called once per frame
@@ -104,6 +104,12 @@ public class SoundManager : MonoBehaviour
     public void CactusTentacles(GameObject cactus)
     {
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/BambooScene/CactusTentacles", cactus);
+    }
+    
+    public void BambooGrow(GameObject bamboo)
+    {
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/BambooScene/BambooGrow", bamboo);
+        Debug.Log("BambooGrowCalled");
     }
     
     // Cave Scene
