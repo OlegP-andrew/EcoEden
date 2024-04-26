@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantBuddy: {fileID: 538819196}
-  plantBuddy1: {fileID: 0}
+  plantBuddy1: {fileID: 538819195}
   player: {fileID: 855500511549760099}
 --- !u!1 &588919087 stripped
 GameObject:
@@ -3734,6 +3734,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.011874443, y: 0.08692589, z: 0.020908112}
   m_Center: {x: -0.0000000011641531, y: -0.038462937, z: 0}
+--- !u!54 &843280231
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843280223}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &863159363
 GameObject:
   m_ObjectHideFlags: 0
@@ -8806,6 +8833,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7059843678094686798, guid: 1258c7bb443888042a3871ac4744a99a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 843280228}
+    - targetCorrespondingSourceObject: {fileID: 7059843678094686798, guid: 1258c7bb443888042a3871ac4744a99a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 843280231}
     - targetCorrespondingSourceObject: {fileID: 7751665525699787501, guid: 1258c7bb443888042a3871ac4744a99a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 371115471}
@@ -9359,6 +9389,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -232.1687
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -724.0913
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -530.01465
+      objectReference: {fileID: 0}
     - target: {fileID: 5669807026851981027, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 69.7
