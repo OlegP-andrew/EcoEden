@@ -32,7 +32,7 @@ public class MushroomButton : IInteractable
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerBod")
         {
             Interact();
             m_Animator.SetBool("press", true);
@@ -41,7 +41,7 @@ public class MushroomButton : IInteractable
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerBod")
         {
             m_Animator.SetBool("press", false);
         }

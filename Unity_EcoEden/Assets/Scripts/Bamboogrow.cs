@@ -9,9 +9,6 @@ public class BambooGrow : MonoBehaviour
         if (collision.gameObject.tag == "Seed")
         {
             GetComponent<Animator>().SetTrigger("grow");
-            
-            //Need to fix timing here
-            SoundManager.S.BambooGrow(this.gameObject);
         }
     }
 }
