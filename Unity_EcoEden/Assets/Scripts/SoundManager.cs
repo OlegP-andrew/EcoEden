@@ -49,7 +49,12 @@ public class SoundManager : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/PlantBuddy/Babbling");
     }
 
-    public void PlantBuddyDriveUpdate(bool isDriving, bool isSprinting)
+
+    public void PlantBuddyDriveSurface(string surfaceMaterial)
+    {
+        plantBuddyDriving.setParameterByNameWithLabel("SurfaceMaterial", surfaceMaterial);
+    }
+    public void PlantBuddyDriveUpdate(bool isDriving, bool isSprinting, bool isGrounded)
     {
         if (isDriving == true)
         {
@@ -67,6 +72,11 @@ public class SoundManager : MonoBehaviour
         else
         {
             sprint = 0;
+        }
+
+        if (isGrounded == true)
+        {
+            
         }
 
         plantBuddyDriving.setParameterByName("isDriving", drive);
