@@ -89,6 +89,7 @@ namespace StarterAssets
         private float _terminalVelocity = 53.0f;
         private int jumpCounter = 0;
         private bool keyDown;
+        public bool onBoat;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -214,7 +215,7 @@ namespace StarterAssets
 
         private void Move()
         {
-            ResetColliders();
+            if (!onBoat) ResetColliders();
 
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
