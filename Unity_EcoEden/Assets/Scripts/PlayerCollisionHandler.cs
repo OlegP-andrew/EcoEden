@@ -28,7 +28,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     private void FixedUpdate()
     {
         Collider[] myColliders = Physics.OverlapSphere(transform.position, 0.5f, usethis);
-        if (myColliders != null)
+        if (myColliders != null && myColliders.Length != 0)
         {
             switch (myColliders[0].tag)
             {
