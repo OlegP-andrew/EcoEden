@@ -308,11 +308,7 @@ MonoBehaviour:
   HasSourceProject: 1
   HasPlatforms: 1
   sourceProjectPath: 
-<<<<<<< Updated upstream
   sourceBankPath: 
-=======
-  sourceBankPath: Assets/Audio/FMOD Banks
->>>>>>> Stashed changes
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
