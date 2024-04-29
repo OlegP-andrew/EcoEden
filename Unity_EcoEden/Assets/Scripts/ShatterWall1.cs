@@ -36,6 +36,4 @@ public class ShatterWall1 : MonoBehaviour
         piecesRoot.SetActive(true);
         endingManager.Path1Ending();
     }
-
-
 }
