@@ -18,11 +18,16 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(WaitASec());
     }
 
+    public void ActuallyLoad()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
     private IEnumerator WaitASec()
     {
         yield return new WaitForSeconds(2f);
 
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        ActuallyLoad();
     }
 }
