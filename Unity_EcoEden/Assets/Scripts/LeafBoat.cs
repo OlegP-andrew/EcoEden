@@ -10,6 +10,7 @@ public class LeafBoat : MonoBehaviour
     public GameObject plantBuddyObject;
     public GameObject player;
     public GameObject boatCollider;
+    public LevelLoader levelLoader;
     private BoxCollider buddyCollider;
 
     private ThirdPersonController thirdPersonController;
@@ -58,7 +59,6 @@ public class LeafBoat : MonoBehaviour
 
         yield return new WaitForSeconds(80f);
 
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        levelLoader.LoadNextScene();
     }
 }

@@ -1,13 +1,26 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public Animator transitionAnimator;
+    private Animator anim;
+
+    public void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     public void LoadNextScene()
     {
-        // transitionAnimator.SetTrigger("Start");
+        anim.SetTrigger("Start");
+
+        StartCoroutine(WaitASec());
+    }
+
+    private IEnumerator WaitASec()
+    {
+        yield return new WaitForSeconds(2f);
 
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);

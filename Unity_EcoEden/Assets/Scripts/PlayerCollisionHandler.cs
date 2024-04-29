@@ -17,7 +17,7 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Crystal") ||
+        if (collision.collider.CompareTag("Crystal") ||
             collision.collider.CompareTag("Fog"))
         {
             if (thirdPersonController.isSprinting)
