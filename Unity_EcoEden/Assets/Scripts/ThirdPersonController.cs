@@ -215,7 +215,7 @@ namespace StarterAssets
 
         private void Move()
         {
-            if (!onBoat) ResetColliders();
+            ResetColliders();
 
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;

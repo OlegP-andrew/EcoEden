@@ -9,9 +9,7 @@ public class LeafBoat : MonoBehaviour
     public Transform plantBuddy;
     public GameObject plantBuddyObject;
     public GameObject player;
-    public GameObject boatCollider;
     public LevelLoader levelLoader;
-    private BoxCollider buddyCollider;
 
     private ThirdPersonController thirdPersonController;
     private Animator anim;
@@ -22,7 +20,6 @@ public class LeafBoat : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         thirdPersonController = player.GetComponent<ThirdPersonController>();
-        buddyCollider = plantBuddyObject.GetComponent<BoxCollider>();
     }
 
     public void Update()
@@ -51,11 +48,9 @@ public class LeafBoat : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         constraint = true;
-        thirdPersonController.onBoat = true;
         thirdPersonController.MoveSpeed /= 1.5f;
         thirdPersonController.JumpHeight = 0f;
         thirdPersonController.enabled = true;
-        boatCollider.SetActive(true);
 
         yield return new WaitForSeconds(80f);
 
