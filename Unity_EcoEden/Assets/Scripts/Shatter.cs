@@ -25,7 +25,6 @@ public class Shatter : MonoBehaviour
         {
             if (playerController._input.sprint)
             {
-                Debug.Log("good");
                 collisionsCount++;
                 if (collisionsCount >= requiredCollisions) ShatterOnSprint();
             }
