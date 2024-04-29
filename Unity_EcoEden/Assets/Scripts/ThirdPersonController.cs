@@ -412,10 +412,10 @@ namespace StarterAssets
         {
             if (collision.gameObject.CompareTag("Crystal"))
             {
+                Debug.Log("good");
                 if (isSprinting) 
                 {
                     _animator.SetTrigger("collide");
-                    // Debug.Log("good");
                 }
             }
 

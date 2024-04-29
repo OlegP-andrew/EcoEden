@@ -4,25 +4,32 @@ using FMODUnityResonance;
 using NUnit.Framework.Constraints;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using StarterAssets;
 
 public class PlayerCollisionHandler : MonoBehaviour
 {
     [SerializeField] float bounceForce;
 
     public LayerMask usethis;
+    public ThirdPersonController thirdPersonController;
     private string surfaceMaterial;
+    private Animator anim;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Fog"))
+        if (collision.gameObject.CompareTag("Crystal") ||
+            collision.collider.CompareTag("Fog"))
         {
-            // TODO: Play animation
+            if (thirdPersonController.isSprinting)
+            {
+                anim.SetTrigger("collide");
+            }
         }
     }
 
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
