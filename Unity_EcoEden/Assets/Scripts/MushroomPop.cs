@@ -14,7 +14,7 @@ public class MushroomPop : MonoBehaviour
         m_Animator = gameObject.transform.parent.GetComponent<Animator>();
         if (toggled)
         {
-            m_Animator.SetBool("sink", true);
+            m_Animator.SetBool("press", true);
         }
     }
 
@@ -26,11 +26,12 @@ public class MushroomPop : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.tag == "PlayerBod")
+        Debug.Log(collision.transform.position.y - gameObject.transform.position.y);
+        Debug.Log(collision.gameObject.tag == "Player");
+        if (collision.gameObject.tag == "Player" && collision.transform.position.y - gameObject.transform.position.y > 2f)
         {
             Interact();
-            m_Animator.SetBool("sink", true);
+            m_Animator.SetBool("press", true);
         }
     }
 
@@ -38,13 +39,8 @@ public class MushroomPop : MonoBehaviour
     {
         foreach (GameObject i in toggles)
         {
-            MushroomPop j = i.GetComponent<MushroomPop>();
-            j.Toggle(); 
+            MushroomRaise j = i.GetComponent<MushroomRaise>();
+            j.Interact(); 
         }
-    }
-
-    public void Toggle()
-    {
-        m_Animator.SetBool("sink", false);
     }
 }
