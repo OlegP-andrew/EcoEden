@@ -26,11 +26,11 @@ public class MushroomPop : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("gooo");
         if (collision.gameObject.tag == "Player" && collision.transform.position.y - gameObject.transform.position.y > 2f)
         {
             Interact();
             m_Animator.SetBool("press", true);
-            Debug.Log("goo");
         }
     }
 

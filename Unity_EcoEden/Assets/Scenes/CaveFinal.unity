@@ -8501,7 +8501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: c7efd9a5a1b7fa04fa11cc6a988e9dd5, type: 3}
+  m_Texture: {fileID: 2800000, guid: e0212882ebf1feb4191c8d99a544b71a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -10443,7 +10443,7 @@ PrefabInstance:
       objectReference: {fileID: 6694741865247055935}
     - target: {fileID: 884352946824616791, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1973615529731026272, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_IsKinematic
@@ -10463,15 +10463,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -221.85083
+      value: -221.91321
       objectReference: {fileID: 0}
     - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -719.95245
+      value: -719.4322
       objectReference: {fileID: 0}
     - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -530.23456
+      value: -530.3739
       objectReference: {fileID: 0}
     - target: {fileID: 3258885816790834477, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
