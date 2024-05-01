@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using FMOD.Studio;
 
 public class VolumeControl : MonoBehaviour
 {
@@ -7,12 +8,19 @@ public class VolumeControl : MonoBehaviour
 
     void Start()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("Volume", 1.0f);
+        volumeSlider.value = 0.5f;
     }
 
     void Update()
     {
-        AudioListener.volume = volumeSlider.value;
-        PlayerPrefs.SetFloat("Volume", volumeSlider.value);
+        SetMasterVolume(volumeSlider.value);
+    }
+
+    public void SetMasterVolume(float volume)
+    {
+        Bus masterBus = FMODUnity.RuntimeManager.GetBus("bus:/");
+        masterBus.setVolume(volume);
+        
+        Debug.Log(volume);
     }
 }
