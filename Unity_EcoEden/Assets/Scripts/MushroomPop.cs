@@ -24,17 +24,18 @@ public class MushroomPop : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("gooo");
-        if (collision.gameObject.tag == "Player" && collision.transform.position.y - gameObject.transform.position.y > 2f)
+        if (other.gameObject.CompareTag("Player") && other.transform.position.y - gameObject.transform.position.y > 2f)
         {
             Interact();
             m_Animator.SetBool("press", true);
+            Debug.Log("goo");
         }
     }
 
-    void OnCollisionExit(Collision collision)
+    /*
+    void OnTriggerExit(Collision collision)
     {
         if (collision.gameObject.tag == "Player" && collision.transform.position.y - gameObject.transform.position.y > 2f)
         {
@@ -43,6 +44,7 @@ public class MushroomPop : MonoBehaviour
             Debug.Log("down");
         }
     }
+    */
 
     public void Interact()
     {
