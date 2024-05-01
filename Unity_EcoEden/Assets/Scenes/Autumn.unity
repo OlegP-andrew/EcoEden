@@ -300,7 +300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5815534300442924636, guid: 757eda6552d8cca4fb7dd5ab89d98488, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.34
+      value: -7.33
       objectReference: {fileID: 0}
     - target: {fileID: 5815534300442924636, guid: 757eda6552d8cca4fb7dd5ab89d98488, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1706,15 +1706,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 121.95628
+      value: 645.571
       objectReference: {fileID: 0}
     - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1086.4297
+      value: -5447.397
       objectReference: {fileID: 0}
     - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -452.0457
+      value: 72.03107
       objectReference: {fileID: 0}
     - target: {fileID: 3258885816790834477, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
