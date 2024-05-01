@@ -24,12 +24,23 @@ public class MushroomPop : MonoBehaviour
         
     }
 
-    void OnCollisionStay(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player" && collision.transform.position.y - gameObject.transform.position.y > 2f)
         {
             Interact();
             m_Animator.SetBool("press", true);
+            Debug.Log("goo");
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player" && collision.transform.position.y - gameObject.transform.position.y > 2f)
+        {
+            
+            m_Animator.SetBool("press", false);
+            Debug.Log("down");
         }
     }
 
