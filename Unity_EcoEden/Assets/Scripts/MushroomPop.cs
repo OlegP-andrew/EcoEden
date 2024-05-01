@@ -24,10 +24,8 @@ public class MushroomPop : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionStay(Collision collision)
     {
-        Debug.Log(collision.transform.position.y - gameObject.transform.position.y);
-        Debug.Log(collision.gameObject.tag == "Player");
         if (collision.gameObject.tag == "Player" && collision.transform.position.y - gameObject.transform.position.y > 2f)
         {
             Interact();
