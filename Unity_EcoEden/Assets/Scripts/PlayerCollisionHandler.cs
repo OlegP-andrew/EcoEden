@@ -14,7 +14,7 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     public LayerMask usethis;
     public ThirdPersonController thirdPersonController;
-    private string surfaceMaterial;
+    private string surfaceMaterial = "Dirt";
     private Animator anim;
 
     private void OnCollisionEnter(Collision collision)
