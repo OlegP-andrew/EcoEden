@@ -42,6 +42,8 @@ public class EndingManager : MonoBehaviour
 
         yield return new WaitForSeconds(10f);
         plantBuddyAnim.SetTrigger("afraid");
+        
+        SoundManager.S.PlantBuddyAfraid();
 
         yield return new WaitForSeconds(7f);
         playerRespawner.RespawnPlayer(respawnPosition);
@@ -57,6 +59,8 @@ public class EndingManager : MonoBehaviour
 
         yield return new WaitForSeconds(11f);
         plantBuddyAnim.SetTrigger("afraid");
+        
+        SoundManager.S.PlantBuddyAfraid();
 
         yield return new WaitForSeconds(5f);
         playerRespawner.RespawnPlayer(respawnPosition);
