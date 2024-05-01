@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using cakeslice;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,6 +17,7 @@ public class Interactor : MonoBehaviour
         foreach (GameObject i in ints)
         {
             listing.Add(i.GetComponent<IInteractable>());
+            i.GetComponent<Outline>().enabled = false;
         }
         itr.action.Enable();
         itr.action.performed += Inter;
@@ -24,9 +26,10 @@ public class Interactor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        IInteractable old = current;
         Transform closest = null;
         float closestDistanceSqr = 20f;
-        Vector3 currentPosition = transform.position;
+        Vector3 currentPosition = gameObject.transform.position;
         foreach(IInteractable i in listing)
         {
             Transform potentialTarget = i.GetComponentInParent<Transform>();
@@ -43,6 +46,11 @@ public class Interactor : MonoBehaviour
         {
             current = null;
         }
+        if (current != old && old != null)
+        {
+            old.HighlightOff();
+        }
+        if (current != null) current.HighlightOn();
     }
 
     void Inter(InputAction.CallbackContext context)
