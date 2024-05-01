@@ -7,6 +7,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using StarterAssets;
 using Debug = UnityEngine.Debug;
+using System.Collections;
 
 public class PlayerCollisionHandler : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     public LayerMask usethis;
     public ThirdPersonController thirdPersonController;
+    public PlayerRespawner playerRespawner;
     private string surfaceMaterial = "Dirt";
     private Animator anim;
 
@@ -28,7 +30,10 @@ public class PlayerCollisionHandler : MonoBehaviour
             }
         }
 
-        //Debug.Log(collision.gameObject.tag);
+        if (collision.collider.CompareTag("MazeLowerLevel"))
+        {
+            StartCoroutine(PrepRespanwn());
+        }
     }
 
     void Start()
@@ -60,6 +65,14 @@ public class PlayerCollisionHandler : MonoBehaviour
         }
 
         SoundManager.S.PlantBuddyDriveGroundUpdate(surfaceMaterial);
+    }
+
+    private IEnumerator PrepRespanwn()
+    {
+        yield return new WaitForSeconds(5f);
+
+        Vector3 pos = new Vector3(89.15f, 57.69f, 7.06f);
+        playerRespawner.RespawnPlayer(pos);
     }
     
 }
