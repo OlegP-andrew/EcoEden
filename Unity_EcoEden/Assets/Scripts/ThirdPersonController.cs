@@ -478,11 +478,14 @@ namespace StarterAssets
             {
                 if (_hasAnimator)
                 {
-                    // wait for a random period between 2 and 4 seconds
-                    yield return new WaitForSeconds(Random.Range(3f, 5f));
+                    // wait for a random period between 10 and 30 seconds
+                    yield return new WaitForSeconds(Random.Range(11f, 31f));
 
                     // set trigger
                     _animator.SetTrigger("random");
+                    
+                    // Play PlantBuddy Sound
+                    SoundManager.S.PlantBuddyRandom();
 
                     // wait for current animation to finish
                     yield return new WaitForSeconds(3f);

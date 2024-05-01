@@ -20,9 +20,10 @@ public class SoundManager : MonoBehaviour
     // Variables
     private int drive;
     private int sprint;
+    private int ground;
     
     public int gamestate;
-    public int surfaceMaterial;
+    //public int surfaceMaterial;
 
     private void Awake()
     {
@@ -54,12 +55,27 @@ public class SoundManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/PlantBuddy/Babbling");
     }
-
-
-    public void PlantBuddyDriveSurface(string surfaceMaterial)
+    
+    public void PlantBuddyAfraid()
     {
-        plantBuddyDriving.setParameterByNameWithLabel("SurfaceMaterial", surfaceMaterial);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlantBuddy/Afraid");
     }
+
+    public void PlantBuddyCelebrate()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlantBuddy/Celebration");
+    }
+    
+    public void PlantBuddyCollide()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlantBuddy/Collide");
+    }
+    
+    public void PlantBuddyRandom()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlantBuddy/Random");
+    }
+    
     public void PlantBuddyDriveUpdate(bool isDriving, bool isSprinting, bool isGrounded)
     {
         if (isDriving == true)
@@ -82,12 +98,24 @@ public class SoundManager : MonoBehaviour
 
         if (isGrounded == true)
         {
-            
+            ground = 1;
+        }
+        else
+        {
+            ground = 0;
         }
 
         plantBuddyDriving.setParameterByName("isDriving", drive);
         plantBuddyDriving.setParameterByName("isSprinting", sprint);
+        plantBuddyDriving.setParameterByName("isGrounded", ground);
+        
+        Debug.Log("ground " + ground);
 
+    }
+
+    public void PlantBuddyDriveGroundUpdate(string material)
+    {
+        plantBuddyDriving.setParameterByNameWithLabel("SurfaceMaterial", material);
     }
     
     // Ambience 

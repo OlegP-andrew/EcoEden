@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 361401834}
   - component: {fileID: 361401833}
   - component: {fileID: 361401832}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Terrain_(0.00, 0.00, -200.00)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1560,7 +1560,7 @@ GameObject:
   - component: {fileID: 813947625}
   - component: {fileID: 813947624}
   - component: {fileID: 813947627}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1887,7 +1887,7 @@ GameObject:
   - component: {fileID: 944383487}
   - component: {fileID: 944383486}
   - component: {fileID: 944383485}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Terrain_(0.00, 0.00, 150.00)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2547,7 +2547,7 @@ GameObject:
   - component: {fileID: 1443201627}
   - component: {fileID: 1443201629}
   - component: {fileID: 1443201628}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Terrain_(0.00, 0.00, 214.92)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3575,9 +3575,10 @@ GameObject:
   - component: {fileID: 1934602417}
   - component: {fileID: 1934602416}
   - component: {fileID: 1934602415}
-  m_Layer: 0
+  - component: {fileID: 1934602419}
+  m_Layer: 13
   m_Name: ponds
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3597,7 +3598,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3670,6 +3671,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 611639710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1934602419
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934602414}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1955845283 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 26907657667801406, guid: 6b54fa14657b77c4fa550f96d6e01fd2, type: 3}
@@ -3991,19 +4014,35 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cb2468e001e91cb45875add7e5833b45, type: 2}
     - target: {fileID: -8619029113460532211, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -8619029113460532211, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
+      propertyPath: m_TagString
+      value: Dirt
       objectReference: {fileID: 0}
     - target: {fileID: -4267232843979977158, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -4267232843979977158, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
+      propertyPath: m_TagString
+      value: Dirt
       objectReference: {fileID: 0}
     - target: {fileID: -908664543974269524, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -908664543974269524, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
+      propertyPath: m_TagString
+      value: Dirt
       objectReference: {fileID: 0}
     - target: {fileID: -72301782869258379, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -72301782869258379, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
+      propertyPath: m_TagString
+      value: Dirt
       objectReference: {fileID: 0}
     - target: {fileID: 722586273615742040, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4023,7 +4062,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cb2468e001e91cb45875add7e5833b45, type: 2}
     - target: {fileID: 6193181557215159160, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193181557215159160, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
+      propertyPath: m_TagString
+      value: Dirt
       objectReference: {fileID: 0}
     - target: {fileID: 7244277877578852314, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4031,7 +4074,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cb2468e001e91cb45875add7e5833b45, type: 2}
     - target: {fileID: 8781612732136061670, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781612732136061670, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
+      propertyPath: m_TagString
+      value: Dirt
       objectReference: {fileID: 0}
     - target: {fileID: 8916008876068458108, guid: b685bab2b848ecf49b31bf36141240e4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4822,7 +4869,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 247
+    m_Bits: 8439
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

@@ -10,6 +10,9 @@ TagManager:
   - Terrain
   - PlayerBod
   - Crystal
+  - Water
+  - Dirt
+  - Stone
   layers:
   - Default
   - TransparentFX
@@ -24,7 +27,7 @@ TagManager:
   - CavePath2
   - BoatCollider
   - Boat
-  - 
+  - Ground
   - 
   - 
   - 

@@ -1036,6 +1036,7 @@ MonoBehaviour:
   BottomClamp: -40
   CameraAngleOverride: 0
   _speed: 0
+  onBoat: 0
   plantBuddy: {fileID: 618368720229167817}
   _input: {fileID: 0}
 --- !u!114 &5626096332926036226
@@ -4301,3 +4302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 0
+  usethis:
+    serializedVersion: 2
+    m_Bits: 8192
+  thirdPersonController: {fileID: 0}

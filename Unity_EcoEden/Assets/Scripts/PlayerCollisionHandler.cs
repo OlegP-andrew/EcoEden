@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
+using FMOD;
 using FMODUnityResonance;
 using NUnit.Framework.Constraints;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using StarterAssets;
+using Debug = UnityEngine.Debug;
 
 public class PlayerCollisionHandler : MonoBehaviour
 {
@@ -25,6 +27,8 @@ public class PlayerCollisionHandler : MonoBehaviour
                 anim.SetTrigger("collide");
             }
         }
+
+        //Debug.Log(collision.gameObject.tag);
     }
 
     void Start()
@@ -34,25 +38,29 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Collider[] myColliders = Physics.OverlapSphere(transform.position, 0.5f, usethis);
+        Collider[] myColliders = Physics.OverlapSphere(transform.position, 1f, usethis);
         if (myColliders != null && myColliders.Length != 0)
         {
             switch (myColliders[0].tag)
             {
-                case "water":
+                case "Water":
                     surfaceMaterial = "Water";
                     break;
-                case "dirt":
+                case "Dirt":
                     surfaceMaterial = "Dirt";
                     break;
-                case "stone":
+                case "Stone":
                     surfaceMaterial = "Stone";
                     break;
                 default:
                     surfaceMaterial = "Grass";
                     break;
             }
-
+            Debug.Log(myColliders[0].tag + " " + surfaceMaterial);
         }
+
+        SoundManager.S.PlantBuddyDriveGroundUpdate(surfaceMaterial);
     }
+    
 }
+    
