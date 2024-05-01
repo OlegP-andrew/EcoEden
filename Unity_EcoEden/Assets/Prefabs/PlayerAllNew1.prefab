@@ -936,6 +936,7 @@ GameObject:
   - component: {fileID: 1580405593615955461}
   - component: {fileID: 2866304356313990079}
   - component: {fileID: 5808127938881744222}
+  - component: {fileID: 9030212592512295727}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1026,16 +1027,17 @@ MonoBehaviour:
   JumpTimeout: 0
   FallTimeout: 0
   Grounded: 1
-  GroundedOffset: -0.14
-  GroundedRadius: 0.28
+  GroundedOffset: -2.2
+  GroundedRadius: 0.6
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8193
   CinemachineCameraTarget: {fileID: 8182418423794393665}
   TopClamp: 70
   BottomClamp: -40
   CameraAngleOverride: 0
   _speed: 0
+  onBoat: 0
   plantBuddy: {fileID: 618368720229167817}
   _input: {fileID: 0}
 --- !u!114 &5626096332926036226
@@ -1198,6 +1200,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2313d617ce81d94b849d4e58cba288a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9030212592512295727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2220746028354320930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e9a8041171d77498b2dccfea615026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ints: []
+  listing: []
+  itr: {fileID: 6359073136216445197, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  TargetDistSqr: 60
 --- !u!1 &2923424995236309929
 GameObject:
   m_ObjectHideFlags: 0
@@ -4301,3 +4319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 0
+  usethis:
+    serializedVersion: 2
+    m_Bits: 8192
+  thirdPersonController: {fileID: 0}
