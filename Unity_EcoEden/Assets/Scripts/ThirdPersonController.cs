@@ -180,14 +180,24 @@ namespace StarterAssets
             CameraRotation();
         }
 
+        //public GameObject wow;
+
         private void GroundedCheck()
         {
             // set sphere position, with offset
-            Vector3 spherePosition = new Vector3(transform.position.x, 1.73f - GroundedOffset,
+            Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset,
                 transform.position.z);
             Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
                 QueryTriggerInteraction.Ignore);
-
+            
+            /*
+            Collider[] hitColliders = Physics.OverlapSphere (spherePosition, GroundedRadius, GroundLayers,
+                QueryTriggerInteraction.Ignore);
+            foreach (var c in hitColliders)
+            {
+                Vector3 foo = c.ClosestPointOnBounds(spherePosition);
+                wow.transform.position = foo;
+            }*/
             // reset jump counter
             if (Grounded) jumpCounter = 0;
         }
