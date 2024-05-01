@@ -21,6 +21,8 @@ public class SoundManager : MonoBehaviour
     private int drive;
     private int sprint;
     private int ground;
+    private int cave;
+    private int path2;
     
     public int gamestate;
     //public int surfaceMaterial;
@@ -109,7 +111,7 @@ public class SoundManager : MonoBehaviour
         plantBuddyDriving.setParameterByName("isSprinting", sprint);
         plantBuddyDriving.setParameterByName("isGrounded", ground);
         
-        Debug.Log("ground " + ground);
+        //Debug.Log("ground " + ground);
 
     }
 
@@ -138,8 +140,36 @@ public class SoundManager : MonoBehaviour
                 break;
         }
     }
-    
-    // Bamboo Scene
+
+    public void CaveAmbienceZones(bool isCave)
+    {
+        if (isCave == true)
+        {
+            cave = 1;
+        }
+        else
+        {
+            cave = 0;
+        }
+
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("isCave", cave);
+    }
+
+    public void Path2Check(bool isPath)
+    {
+        if (isPath == true)
+        {
+            path2 = 1;
+        }
+        else
+        {
+            path2 = 0;
+        }
+
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("isPath2", path2);
+    }
+
+        // Bamboo Scene
 
     public void CactusTentacles(GameObject cactus)
     {

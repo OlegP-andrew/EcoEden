@@ -22,6 +22,6 @@ public class RiverSoundEmitter : MonoBehaviour
         emitterLocation = riverCollider.ClosestPoint(player.transform.position);
         riverEmitter.transform.position = emitterLocation;
         
-        Debug.Log("player transform " + player.transform.position + " emitterLocation " + emitterLocation);
+        //Debug.Log("player transform " + player.transform.position + " emitterLocation " + emitterLocation);
     }
 }
