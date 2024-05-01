@@ -12,6 +12,7 @@ public class Interactor : MonoBehaviour
     IInteractable current;
     public InputActionReference itr;
     // Start is called before the first frame update
+    public float TargetDistSqr = 60f;
     void Start()
     {
         foreach (GameObject i in ints)
@@ -28,7 +29,7 @@ public class Interactor : MonoBehaviour
     {
         IInteractable old = current;
         Transform closest = null;
-        float closestDistanceSqr = 20f;
+        float closestDistanceSqr = TargetDistSqr;
         Vector3 currentPosition = gameObject.transform.position;
         foreach(IInteractable i in listing)
         {
