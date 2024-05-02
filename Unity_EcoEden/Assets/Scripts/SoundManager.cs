@@ -7,7 +7,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager S;
-    
+
     // EventInstances Defined
 
     // Ambiences
@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour
     private FMOD.Studio.EventInstance autumnAmbience;
     private FMOD.Studio.EventInstance motherPlantAmbience;
     private FMOD.Studio.EventInstance blagoon;
-    
+
     // Plant Buddy
     private FMOD.Studio.EventInstance plantBuddyDriving;
 
@@ -26,7 +26,7 @@ public class SoundManager : MonoBehaviour
     private int ground;
     private int cave;
     private int path2;
-    
+
     public int gamestate;
     //public int surfaceMaterial;
 
@@ -34,14 +34,14 @@ public class SoundManager : MonoBehaviour
     {
         S = this;
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
         // Set and start driving FMOD Instance
         plantBuddyDriving = FMODUnity.RuntimeManager.CreateInstance("event:/PlantBuddy/Driving");
         plantBuddyDriving.start();
-        
+
         caveAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/CaveScene/CaveAmbience");
         bambooAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/BambooScene/BambooAmbience");
         autumnAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/AutumnScene/AutumnAmbience");
@@ -54,17 +54,39 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    
+
     //UI
 
     public void UI1()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/UI/UI2");
     }
-    
-    //Plant Buddy SFX
+
+    //Voice Lines
+
+    public void VoiceLog(int voice)
+    {
+        if (voice == 1)
+        {
+            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Bamboo");
+        } else if (voice == 2)
+        {
+            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Autumn");
+
+        } else if (voice == 3)
+        {
+            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Cave1");
+
+        } else if (voice == 4)
+        {
+            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Motherplant");
+        }
+
+    }
+
+//Plant Buddy SFX
     public void PlantBuddyBabble()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/PlantBuddy/Babbling");
