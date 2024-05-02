@@ -18,6 +18,7 @@ public class AutumnEnding : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             anim.SetTrigger("celebrate");
+            SoundManager.S.PlantBuddyCelebrate();
             levelLoader.LoadNextScene();
         }
     }

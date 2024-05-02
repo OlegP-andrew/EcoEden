@@ -29,6 +29,7 @@ public class PlayerCanvasController : MonoBehaviour
             if (script != null) script.enabled = canvasOn;
             canvasOn = !canvasOn;
             playerCanvas.GetComponent<Canvas>().enabled = canvasOn;
+            SoundManager.S.UI1();
         }
     }
 }
