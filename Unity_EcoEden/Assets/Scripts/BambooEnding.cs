@@ -18,6 +18,7 @@ public class BambooEnding : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            UnityEngine.Debug.Log("gooooooo");
             anim.SetTrigger("celebrate");
             SoundManager.S.PlantBuddyCelebrate();
             levelLoader.LoadNextScene();
