@@ -40,8 +40,9 @@ public class LeafBoat : MonoBehaviour
         thirdPersonController.enabled = false;
 
         anim.SetTrigger("boat");
-        SoundManager.S.LeafCurl(this.gameObject);
         yield return new WaitForSeconds(1f);
+        SoundManager.S.LeafCurl(this.gameObject);
+        SoundManager.S.Music();
 
         positionOffset = transform.position - plantBuddy.position;
 
