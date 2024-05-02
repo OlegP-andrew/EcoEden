@@ -59,6 +59,8 @@ public class Interactor : MonoBehaviour
         if (current != null)
         {
             current.Interact();
+            current.HighlightOff();
+            listing.Remove(current);
         }
     }
 }
