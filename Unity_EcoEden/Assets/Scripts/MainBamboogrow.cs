@@ -7,6 +7,9 @@ public class MainBambooGrow : MonoBehaviour
     public GameObject bamboo;
     public bool seed = false;
     public bool bot = false;
+    public GameObject oldIcon;
+    public GameObject newIcon;
+    // public GameObject seedObject;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -25,7 +28,17 @@ public class MainBambooGrow : MonoBehaviour
     {
         if (seed && bot)
         {
-            bamboo.GetComponent<Animator>().SetTrigger("grow");
+            StartCoroutine(GrowBamboo());
         }
+    }
+
+    private IEnumerator GrowBamboo()
+    {
+        yield return new WaitForSeconds(1f);
+
+        bamboo.GetComponent<Animator>().SetTrigger("grow");
+        // seedObject.SetActive(false);
+        oldIcon.SetActive(false);
+        newIcon.SetActive(true);
     }
 }
