@@ -1061,6 +1061,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2220746028354320930, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.1
@@ -3002,11 +3006,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4240632563778374963, guid: b2505824f9180c1438e4890625cbe4d9, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4281479730
+      value: 4279374354
       objectReference: {fileID: 0}
     - target: {fileID: 4908646379798870065, guid: b2505824f9180c1438e4890625cbe4d9, type: 3}
       propertyPath: m_Name
-      value: StartMenu
+      value: StartMenu6
       objectReference: {fileID: 0}
     - target: {fileID: 5882404273588317194, guid: b2505824f9180c1438e4890625cbe4d9, type: 3}
       propertyPath: m_Pivot.x
@@ -3094,7 +3098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9041872935337014236, guid: b2505824f9180c1438e4890625cbe4d9, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4281479730
+      value: 4278190080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
