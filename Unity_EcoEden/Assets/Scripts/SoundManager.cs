@@ -70,19 +70,21 @@ public class SoundManager : MonoBehaviour
     {
         if (voice == 1)
         {
-            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Bamboo");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Voicelines/Bamboo");
         } else if (voice == 2)
         {
-            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Autumn");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Voicelines/Autumn");
 
         } else if (voice == 3)
         {
-            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Cave1");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Voicelines/Cave1");
 
         } else if (voice == 4)
         {
-            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Motherplant");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Voicelines/Motherplant");
         }
+
+        //Debug.Log("VoiceLogCalled");
 
     }
 
