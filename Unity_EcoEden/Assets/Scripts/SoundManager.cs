@@ -78,6 +78,11 @@ public class SoundManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/PlantBuddy/Random");
     }
+
+    public void PlantBuddyJump()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlantBuddy/Jump");
+    }
     
     public void PlantBuddyDriveUpdate(bool isDriving, bool isSprinting, bool isGrounded)
     {
