@@ -11,7 +11,6 @@ public class AutumnEnding : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             levelLoader.LoadNextScene();
-            // Destroy(gameObject);
         }
     }
 }
