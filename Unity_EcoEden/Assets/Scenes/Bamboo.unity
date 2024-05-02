@@ -1323,6 +1323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LogPage
       objectReference: {fileID: 0}
+    - target: {fileID: 6983654533937001910, guid: 384ef424829529d40b03166911df2422, type: 3}
+      propertyPath: log
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

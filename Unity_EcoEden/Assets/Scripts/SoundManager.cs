@@ -66,9 +66,24 @@ public class SoundManager : MonoBehaviour
 
     //Voice Lines
 
-    public void IntroVoice()
+    public void VoiceLog(int voice)
     {
-        FMODUnity.RuntimeManager.PlayOneShot("");
+        if (voice == 1)
+        {
+            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Bamboo");
+        } else if (voice == 2)
+        {
+            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Autumn");
+
+        } else if (voice == 3)
+        {
+            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Cave1");
+
+        } else if (voice == 4)
+        {
+            FMODUnity.RuntimeManager.CreateInstance("event:/Voicelines/Motherplant");
+        }
+
     }
 
 //Plant Buddy SFX
