@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 0
-  min: 300
+  min: 400
   max: 600
 --- !u!4 &8730788069217958618 stripped
 Transform:
