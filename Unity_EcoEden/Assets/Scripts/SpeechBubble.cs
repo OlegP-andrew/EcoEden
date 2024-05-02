@@ -64,6 +64,15 @@ public class SpeechBubble : MonoBehaviour
                     AddLine("I should try pushing the seed!");
                 }
                 // TODO: follow the same structure
+                if (layerMask == LayerMask.GetMask("Fog"))
+                {
+                    AddLine("Astro told me to stay away from fog...");
+                    AddLine("The rain makes the air fresh");
+                }
+                if (layerMask == LayerMask.GetMask("Big Bamboo"))
+                {
+                    AddLine("How to get to the top of the cliff?");
+                }
             }
         }
     }
