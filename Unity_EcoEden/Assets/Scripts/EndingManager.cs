@@ -11,6 +11,8 @@ public class EndingManager : MonoBehaviour
 
     public GameObject path1;
     public GameObject path2;
+    public GameObject blackLagoon;
+    public GameObject eyeball;
 
     private Animator path1Animator;
     private Animator path2Animator;
@@ -23,6 +25,7 @@ public class EndingManager : MonoBehaviour
         path1Animator = path1.GetComponent<Animator>();
         path2Animator = path2.GetComponent<Animator>();
         respawnPosition = new Vector3(10.36f, 0f, -250.92f);
+        SoundManager.S.BlackLagoonStart(blackLagoon);
     }
 
     public void Path1Ending()
@@ -39,6 +42,8 @@ public class EndingManager : MonoBehaviour
     {
         yield return new WaitForSeconds(15f);
         path1Animator.SetTrigger("play");
+        SoundManager.S.LagoonMonster(blackLagoon);
+        SoundManager.S.BlackLagoonStop();
 
         yield return new WaitForSeconds(10f);
         plantBuddyAnim.SetTrigger("afraid");
@@ -53,6 +58,7 @@ public class EndingManager : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         path2Animator.SetTrigger("play");
+        SoundManager.S.EyeballSound(eyeball);
 
         yield return new WaitForSeconds(11f);
         plantBuddyAnim.SetTrigger("afraid");

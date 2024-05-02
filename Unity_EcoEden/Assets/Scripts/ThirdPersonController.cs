@@ -350,6 +350,8 @@ namespace StarterAssets
                     {
                         _animator.SetBool("jump", true);
                     }
+                    
+                    SoundManager.S.PlantBuddyJump();
 
                     // Set jump counter
                     jumpCounter += 1;
