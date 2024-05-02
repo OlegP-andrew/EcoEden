@@ -30,7 +30,6 @@ public class MushroomPop : MonoBehaviour
         {
             Interact();
             m_Animator.SetBool("press", true);
-            Debug.Log("goo");
         }
     }
 

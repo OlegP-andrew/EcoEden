@@ -13,8 +13,6 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextScene()
     {
-        anim.SetTrigger("Start");
-
         StartCoroutine(WaitASec());
     }
 
@@ -28,6 +26,6 @@ public class LevelLoader : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        ActuallyLoad();
+        anim.SetTrigger("Start");
     }
 }
