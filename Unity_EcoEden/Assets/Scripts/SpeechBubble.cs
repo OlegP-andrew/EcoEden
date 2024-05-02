@@ -10,13 +10,15 @@ public class SpeechBubble : MonoBehaviour
     public List<Line> lines = new List<Line>();
     public TextMeshProUGUI txt;
     public GameObject panel;
+    public float sphereRadius;
+    public List<LayerMask> layerMasks;
 
     // Start is called before the first frame update
     void Start()
     {
-        AddLine("I should explore this place!");
-        AddLine("Press tab to open up my robot menu");
-        AddLine("I love it when it rains!");
+        AddLine("Where am I? I should look around.");
+        AddLine("Press TAB to open up my robot menu");
+        // AddLine("I love it when it rains!");
 
         StartCoroutine(ShowLineRepeatedly());
     }
@@ -25,6 +27,8 @@ public class SpeechBubble : MonoBehaviour
     void Update()
     {
         transform.LookAt(cam);
+
+        AddLineWhenAppropriate();
     }
 
     public void AddLine(string lineInput)
@@ -46,6 +50,24 @@ public class SpeechBubble : MonoBehaviour
         }
     }
 
+    private void AddLineWhenAppropriate()
+    {
+        foreach (LayerMask layerMask in layerMasks)
+        {
+            bool inRange = Physics.CheckSphere(transform.position, sphereRadius, layerMask);
+            if (inRange)
+            {
+                layerMasks.Remove(layerMask);
+                
+                if (layerMask == LayerMask.GetMask("Seed")) 
+                {
+                    AddLine("I should try pushing the seed!");
+                }
+                // TODO: follow the same structure
+            }
+        }
+    }
+
     IEnumerator ShowLineRepeatedly()
     {
         while (true)
@@ -63,7 +85,6 @@ public class SpeechBubble : MonoBehaviour
             }
             else yield return null;
         }
-        
     }
 }
 
