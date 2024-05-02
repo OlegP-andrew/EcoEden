@@ -384,6 +384,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d943e6acc69e8643a4d8bdb372b549b, type: 2}
+    - target: {fileID: 5646985952363002111, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: layerMasks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646985952363002111, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: layerMasks.Array.data[0].m_Bits
+      value: 2097152
+      objectReference: {fileID: 0}
     - target: {fileID: 5669807026851981027, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -985,6 +993,7 @@ GameObject:
   - component: {fileID: 530093886}
   - component: {fileID: 530093887}
   - component: {fileID: 530093888}
+  - component: {fileID: 530093889}
   m_Layer: 0
   m_Name: motherplant
   m_TagString: Untagged
@@ -1048,6 +1057,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 2022661489}
   plantBuddy: {fileID: 15912522}
+--- !u!114 &530093889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530093885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1984873759
+      Data2: 1164701094
+      Data3: 780026752
+      Data4: -677577643
+    Path: event:/MotherPlantScene/Motherplant
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &666903846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2661,7 +2701,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 13175
+    m_Bits: 2110327
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
