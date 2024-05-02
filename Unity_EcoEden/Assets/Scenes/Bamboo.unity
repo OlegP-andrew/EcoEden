@@ -2605,7 +2605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2528569365185979233, guid: c22dcb93583b7f141b3c1e817cace682, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.44
+      value: -20.94
       objectReference: {fileID: 0}
     - target: {fileID: 2528569365185979233, guid: c22dcb93583b7f141b3c1e817cace682, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2613,7 +2613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2528569365185979233, guid: c22dcb93583b7f141b3c1e817cace682, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -58.49
+      value: -57.13
       objectReference: {fileID: 0}
     - target: {fileID: 2528569365185979233, guid: c22dcb93583b7f141b3c1e817cace682, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2649,7 +2649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4590394006982936581, guid: c22dcb93583b7f141b3c1e817cace682, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5474266139740156281, guid: c22dcb93583b7f141b3c1e817cace682, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4296,8 +4296,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.003713844, y: 0.010542461, z: 0.0027317263}
-  m_Center: {x: -0.0014218949, y: -0.004585727, z: 0.001096123}
+  m_Size: {x: 0.003713844, y: 0.0142552955, z: 0.0027317263}
+  m_Center: {x: -0.0014218948, y: -0.0027293048, z: 0.001096123}
 --- !u!114 &2051534312
 MonoBehaviour:
   m_ObjectHideFlags: 0

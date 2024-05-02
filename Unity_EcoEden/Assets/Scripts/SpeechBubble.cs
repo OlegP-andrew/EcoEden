@@ -73,6 +73,28 @@ public class SpeechBubble : MonoBehaviour
                 {
                     AddLine("How to get to the top of the cliff?");
                 }
+                if (layerMask == LayerMask.GetMask("Crystal"))
+                {
+                    AddLine("There's some light trapped in the crystal.");
+                }
+                if (layerMask == LayerMask.GetMask("Boat"))
+                {
+                    AddLine("That leaf looks like a boat!");
+                    AddLine("Row, row, row your boat");
+                    AddLine("Gently down the stream");
+                }
+                if (layerMask == LayerMask.GetMask("Crystalwall"))
+                {
+                    AddLine("I wonder what's behind this wall");
+                }
+                if (layerMask == LayerMask.GetMask("Buttonmush"))
+                {
+                    AddLine("These little mushrooms look like buttons...");
+                }
+                if (layerMask == LayerMask.GetMask("Autgap"))
+                {
+                    AddLine("The gaps are soooo deep! I'm scared.");
+                }
             }
         }
     }
