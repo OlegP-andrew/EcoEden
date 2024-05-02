@@ -27,6 +27,7 @@ public class PlayerCollisionHandler : MonoBehaviour
             if (thirdPersonController.isSprinting)
             {
                 anim.SetTrigger("collide");
+                SoundManager.S.PlantBuddyCollide();
             }
         }
 

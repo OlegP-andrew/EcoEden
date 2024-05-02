@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
     // Ambiences
     private FMOD.Studio.EventInstance caveAmbience;
     private FMOD.Studio.EventInstance bambooAmbience;
+    private FMOD.Studio.EventInstance blagoon;
     
     // Plant Buddy
     private FMOD.Studio.EventInstance plantBuddyDriving;
@@ -169,7 +170,7 @@ public class SoundManager : MonoBehaviour
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("isPath2", path2);
     }
 
-        // Bamboo Scene
+    // Bamboo Scene
 
     public void CactusTentacles(GameObject cactus)
     {
@@ -186,4 +187,32 @@ public class SoundManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/CaveScene/CrystalShatter", brokenCrystal);
     }
+
+    public void BlackLagoonStart(GameObject blackLagoon)
+    {
+        blagoon = FMODUnity.RuntimeManager.CreateInstance("event:/CaveScene/BlackLagoon");
+        blagoon.start();
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(blagoon, blackLagoon.transform);
+    }
+
+    public void BlackLagoonStop()
+    {
+        blagoon.stop(STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public void LagoonMonster(GameObject blackLagoon)
+    {
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/CaveScene/LagoonMonster", blackLagoon);
+    }
+    
+    public void EyeballSound(GameObject eyeball)
+    {
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/CaveScene/Eyeball", eyeball);
+    }
+
+    public void LeafCurl(GameObject leaf)
+    {
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/CaveScene/LeafCurl", leaf);
+    }
+    
 }
