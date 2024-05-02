@@ -300,8 +300,11 @@ namespace StarterAssets
             // update animator if using character
             if (_hasAnimator)
             {
-                _animator.SetBool("walk", _speed > 0f);
-                if (Input.GetKeyDown(KeyCode.LeftShift) && _input.move != Vector2.zero) 
+                _animator.SetBool("walk", _speed > 0f); 
+                if ((Input.GetKeyDown(KeyCode.LeftShift) && _input.move != Vector2.zero) ||
+                    (_input.sprint && (Input.GetKeyDown(KeyCode.W) || 
+                    Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) ||
+                    Input.GetKeyDown(KeyCode.D))))
                 {
                     _animator.ResetTrigger("sprintend");
                     _animator.SetTrigger("sprint");

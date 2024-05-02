@@ -8,10 +8,12 @@ public class BambooSeedInteraction : MonoBehaviour
     private Rigidbody seedRigidbody;
     public float torqueMagnitude;
     private Vector3 pushDir;
+    private Animator anim;
 
     private void Start()
     {
         seedRigidbody = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -22,18 +24,18 @@ public class BambooSeedInteraction : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             isPushing = true;
             pushDir = transform.position - plantBuddy.position;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             isPushing = false;
         }
@@ -41,6 +43,13 @@ public class BambooSeedInteraction : MonoBehaviour
 
     public void MoveSeed()
     {
-        seedRigidbody.AddTorque((Vector3.up) * torqueMagnitude);
+        Quaternion rotation = Quaternion.Euler(0, 90f, 0);
+        Vector3 rotatedVector = rotation * pushDir;
+        seedRigidbody.AddTorque(rotatedVector * torqueMagnitude);
+    }
+
+    public void Sink()
+    {
+        anim.SetTrigger("play");
     }
 }
