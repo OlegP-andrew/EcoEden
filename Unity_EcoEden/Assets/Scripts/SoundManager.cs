@@ -179,7 +179,6 @@ public class SoundManager : MonoBehaviour
     public void BambooGrow(GameObject bamboo)
     {
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/BambooScene/BambooGrow", bamboo);
-        Debug.Log("BambooGrowCalled");
     }
     
     // Cave Scene

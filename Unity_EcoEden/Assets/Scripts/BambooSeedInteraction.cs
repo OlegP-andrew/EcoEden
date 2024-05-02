@@ -8,12 +8,10 @@ public class BambooSeedInteraction : MonoBehaviour
     private Rigidbody seedRigidbody;
     public float torqueMagnitude;
     private Vector3 pushDir;
-    private Animator anim;
 
     private void Start()
     {
         seedRigidbody = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -46,10 +44,5 @@ public class BambooSeedInteraction : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0, 90f, 0);
         Vector3 rotatedVector = rotation * pushDir;
         seedRigidbody.AddTorque(rotatedVector * torqueMagnitude);
-    }
-
-    public void Sink()
-    {
-        anim.SetTrigger("play");
     }
 }

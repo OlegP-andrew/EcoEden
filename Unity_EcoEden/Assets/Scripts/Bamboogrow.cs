@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class BambooGrow : MonoBehaviour
 {
-    public BambooSeedInteraction seed;
+    public GameObject seed;
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Seed")
         {
-            StartCoroutine(Wait());
+            StartCoroutine(Grow());
         }
     }
 
-    private IEnumerator Wait()
+    private IEnumerator Grow()
     {
-        seed.Sink();
-
         yield return new WaitForSeconds(2f);
-
+            
         GetComponent<Animator>().SetTrigger("grow");
+        seed.SetActive(false);
             
         //Need to fix timing here
         SoundManager.S.BambooGrow(this.gameObject);

@@ -61,7 +61,6 @@ public class PlayerCollisionHandler : MonoBehaviour
                     surfaceMaterial = "Grass";
                     break;
             }
-            // Debug.Log(myColliders[0].tag + " " + surfaceMaterial);
         }
 
         SoundManager.S.PlantBuddyDriveGroundUpdate(surfaceMaterial);
