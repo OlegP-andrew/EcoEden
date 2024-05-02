@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMOD;
 using UnityEngine;
 
 public class BambooEnding : MonoBehaviour
@@ -18,6 +19,7 @@ public class BambooEnding : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             anim.SetTrigger("celebrate");
+            SoundManager.S.PlantBuddyCelebrate();
             levelLoader.LoadNextScene();
         }
     }

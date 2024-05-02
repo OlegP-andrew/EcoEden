@@ -35,6 +35,8 @@ public class MainBambooGrow : MonoBehaviour
     private IEnumerator GrowBamboo()
     {
         yield return new WaitForSeconds(1f);
+        
+        SoundManager.S.BambooGrow(this.gameObject);
 
         bamboo.GetComponent<Animator>().SetTrigger("grow");
         // seedObject.SetActive(false);
