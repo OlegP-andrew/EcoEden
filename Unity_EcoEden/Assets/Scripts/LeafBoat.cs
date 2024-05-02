@@ -48,9 +48,10 @@ public class LeafBoat : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         constraint = true;
+        thirdPersonController.enabled = true;
+        thirdPersonController.onBoat = true;
         thirdPersonController.MoveSpeed /= 1.5f;
         thirdPersonController.JumpHeight = 0f;
-        thirdPersonController.enabled = true;
 
         yield return new WaitForSeconds(80f);
 

@@ -170,7 +170,7 @@ namespace StarterAssets
         {
             _hasAnimator = _animator != null;
 
-            JumpAndGravity();
+            if (!onBoat) JumpAndGravity();
             GroundedCheck();
             Move();
         }
@@ -231,7 +231,7 @@ namespace StarterAssets
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
             // set sprinting bool
-            if (_input.sprint && _input.move != Vector2.zero) isSprinting = true;
+            if (!onBoat && _input.sprint && _input.move != Vector2.zero) isSprinting = true;
             // isSprinting = _input.sprint && _input.move != Vector2.zero ? true : false;
 
             // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
