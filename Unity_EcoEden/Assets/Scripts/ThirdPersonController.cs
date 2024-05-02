@@ -304,7 +304,7 @@ namespace StarterAssets
                 if ((Input.GetKeyDown(KeyCode.LeftShift) && _input.move != Vector2.zero) ||
                     (_input.sprint && (Input.GetKeyDown(KeyCode.W) || 
                     Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) ||
-                    Input.GetKeyDown(KeyCode.D))))
+                    Input.GetKeyDown(KeyCode.D)))) 
                 {
                     _animator.ResetTrigger("sprintend");
                     _animator.SetTrigger("sprint");
