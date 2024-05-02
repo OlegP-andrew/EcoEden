@@ -2715,7 +2715,7 @@ GameObject:
   - component: {fileID: 905805146}
   - component: {fileID: 905805145}
   m_Layer: 5
-  m_Name: RiverImage
+  m_Name: RiverImage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4130,7 +4130,7 @@ GameObject:
   - component: {fileID: 1447774508}
   - component: {fileID: 1447774507}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Canvas (1)1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5178,6 +5178,14 @@ PrefabInstance:
     - target: {fileID: 1717950604152742917, guid: 55e07e6d33fc7f54b8a09a62cf4330e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596392605691985697, guid: 55e07e6d33fc7f54b8a09a62cf4330e6, type: 3}
+      propertyPath: m_Name
+      value: RiverImage1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021704477299310389, guid: 55e07e6d33fc7f54b8a09a62cf4330e6, type: 3}
+      propertyPath: m_Name
+      value: Canvas1
       objectReference: {fileID: 0}
     - target: {fileID: 9030545660076991309, guid: 55e07e6d33fc7f54b8a09a62cf4330e6, type: 3}
       propertyPath: m_Name
@@ -7512,7 +7520,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 32631
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: f242f62832770b3489b0497373b15def, type: 2}
   m_TargetDisplay: 0

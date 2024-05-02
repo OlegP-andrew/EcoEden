@@ -6616,7 +6616,7 @@ GameObject:
   - component: {fileID: 1337197130}
   - component: {fileID: 1337197129}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Canvas (1) 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9161,7 +9161,7 @@ GameObject:
   - component: {fileID: 1829238036}
   - component: {fileID: 1829238035}
   m_Layer: 5
-  m_Name: AutumnImage
+  m_Name: AutumnImage 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11147,9 +11147,37 @@ PrefabInstance:
       propertyPath: thirdPersonController
       value: 
       objectReference: {fileID: 6694741865247055935}
+    - target: {fileID: 632007332072774831, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_Active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 632007332072774831, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_TranslationAtRest.x
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 632007332072774831, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_TranslationAtRest.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 632007332072774831, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_TranslationAtRest.z
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 632007332072774831, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_TranslationOffset.x
+      value: -0.02999992
+      objectReference: {fileID: 0}
+    - target: {fileID: 632007332072774831, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_TranslationOffset.y
+      value: -0.114158705
+      objectReference: {fileID: 0}
+    - target: {fileID: 632007332072774831, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_TranslationOffset.z
+      value: -0.090000026
+      objectReference: {fileID: 0}
     - target: {fileID: 884352946824616791, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1973615529731026272, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_IsKinematic
@@ -11157,7 +11185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011033670241533015, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.02479
+      value: 3.04
       objectReference: {fileID: 0}
     - target: {fileID: 2011033670241533015, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11165,23 +11193,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011033670241533015, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.217873
+      value: -1.66
       objectReference: {fileID: 0}
     - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -199.18237
+      value: -0.09000002
       objectReference: {fileID: 0}
     - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -662.2398
+      value: -0.02999988
       objectReference: {fileID: 0}
     - target: {fileID: 2453085215522751172, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -559.4955
+      value: 0.060000002
       objectReference: {fileID: 0}
     - target: {fileID: 3258885816790834477, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
-      value: -0.37067413
+      value: -0.37068176
       objectReference: {fileID: 0}
     - target: {fileID: 3258885816790834477, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].y
@@ -11189,15 +11217,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3258885816790834477, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].z
-      value: 0.028961182
+      value: 0.028953552
       objectReference: {fileID: 0}
     - target: {fileID: 5110477201352360334, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01379981
+      value: 0.013799954
       objectReference: {fileID: 0}
     - target: {fileID: 5110477201352360334, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000000079241744
+      value: 0.000000039620872
       objectReference: {fileID: 0}
     - target: {fileID: 5669807026851981027, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11253,7 +11281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865736265774452195, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
-      value: -0.043319702
+      value: -0.04332733
       objectReference: {fileID: 0}
     - target: {fileID: 7865736265774452195, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].y
@@ -11261,11 +11289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865736265774452195, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].z
-      value: 0.012268066
+      value: 0.012260437
       objectReference: {fileID: 0}
     - target: {fileID: 8933056338357936719, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
-      value: 0.4660797
+      value: 0.46607208
       objectReference: {fileID: 0}
     - target: {fileID: 8933056338357936719, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].y
@@ -11273,7 +11301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933056338357936719, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].z
-      value: -0.09993744
+      value: -0.09994507
       objectReference: {fileID: 0}
     - target: {fileID: 9030212592512295727, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: ints.Array.size
@@ -11395,6 +11423,14 @@ PrefabInstance:
     - target: {fileID: 1717950604152742917, guid: 55e07e6d33fc7f54b8a09a62cf4330e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596392605691985697, guid: 55e07e6d33fc7f54b8a09a62cf4330e6, type: 3}
+      propertyPath: m_Name
+      value: RiverImage 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021704477299310389, guid: 55e07e6d33fc7f54b8a09a62cf4330e6, type: 3}
+      propertyPath: m_Name
+      value: Canvas 4
       objectReference: {fileID: 0}
     - target: {fileID: 7994172122286852185, guid: 55e07e6d33fc7f54b8a09a62cf4330e6, type: 3}
       propertyPath: m_Texture
@@ -12087,7 +12123,7 @@ Transform:
   m_GameObject: {fileID: 807014787632270542}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 77.34085, y: 9.540007, z: -80.4}
+  m_LocalPosition: {x: 107.310425, y: 9.540007, z: -83.51575}
   m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1.3333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
