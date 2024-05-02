@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Winterlake.unity
     guid: b253e1eeba4bfc14480153cffd4451b9
+  - enabled: 1
+    path: Assets/Scenes/EndMontage.unity
+    guid: fc61da980a17b6748b5fe1e0e6c27343
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
