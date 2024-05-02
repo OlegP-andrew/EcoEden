@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Bamboo.unity
     guid: 5d2b9427e2ebf5b4a92e80143c5d6fb7
   - enabled: 1
-    path: Assets/Scenes/summer.unity
-    guid: 6357bce800a5d9f49becd6320f670638
+    path: Assets/Scenes/Autumn.unity
+    guid: fcdaeb4d717488a4fbd64562012a2400
   - enabled: 1
     path: Assets/Scenes/CaveFinal.unity
     guid: 779ad22b4549d224c95649589aacc6db

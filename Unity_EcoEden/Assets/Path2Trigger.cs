@@ -18,7 +18,7 @@ public class Path2Trigger : MonoBehaviour
     {
         SoundManager.S.Path2Check(isPath2);
         
-        Debug.Log("isPath2 " + isPath2);
+        // Debug.Log("isPath2 " + isPath2);
     }
     
     private void OnTriggerStay(Collider other)
