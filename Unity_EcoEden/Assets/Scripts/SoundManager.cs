@@ -217,6 +217,12 @@ public class SoundManager : MonoBehaviour
 
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("isPath2", path2);
     }
+    
+    // Music
+    public void Music()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Music/Liszt");
+    }
 
     // Bamboo Scene
 
