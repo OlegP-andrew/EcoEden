@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     private Animator anim;
+    public int SceneNum;
 
     public void Start()
     {
@@ -18,7 +19,7 @@ public class LevelLoader : MonoBehaviour
 
     public void ActuallyLoad()
     {
-        SoundManager.S.StopAmbience();
+        if (SceneNum != 1) SoundManager.S.StopAmbience();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }

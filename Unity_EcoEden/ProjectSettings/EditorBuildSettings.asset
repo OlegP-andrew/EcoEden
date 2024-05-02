@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 7c4400aecbb141d428edd1fcbbb4bbb3
   - enabled: 1
+    path: Assets/Scenes/StartMontage.unity
+    guid: fdc59c5de7ef5cd4eb13b97ec3b06bee
+  - enabled: 1
     path: Assets/Scenes/Bamboo.unity
     guid: 5d2b9427e2ebf5b4a92e80143c5d6fb7
   - enabled: 1
