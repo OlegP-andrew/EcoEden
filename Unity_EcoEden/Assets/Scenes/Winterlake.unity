@@ -384,6 +384,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d943e6acc69e8643a4d8bdb372b549b, type: 2}
+    - target: {fileID: 5646985952363002111, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: layerMasks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646985952363002111, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: layerMasks.Array.data[0].m_Bits
+      value: 2097152
+      objectReference: {fileID: 0}
     - target: {fileID: 5669807026851981027, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -2661,7 +2669,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 13175
+    m_Bits: 2110327
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

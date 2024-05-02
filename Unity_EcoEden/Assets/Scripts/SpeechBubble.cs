@@ -89,11 +89,16 @@ public class SpeechBubble : MonoBehaviour
                 }
                 if (layerMask == LayerMask.GetMask("Buttonmush"))
                 {
+                    Debug.Log("s");
                     AddLine("These little mushrooms look like buttons...");
                 }
                 if (layerMask == LayerMask.GetMask("Autgap"))
                 {
                     AddLine("The gaps are soooo deep! I'm scared.");
+                }
+                if (layerMask == LayerMask.GetMask("Motherscene"))
+                {
+                    AddLine("I feel cold.");
                 }
             }
         }
