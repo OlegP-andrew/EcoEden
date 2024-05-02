@@ -468,6 +468,18 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.045
       objectReference: {fileID: 0}
+    - target: {fileID: 6705470480268627442, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9655077
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705470480268627442, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9411415
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705470480268627442, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9685534
+      objectReference: {fileID: 0}
     - target: {fileID: 7081112312439953466, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: JumpHeight
       value: 5

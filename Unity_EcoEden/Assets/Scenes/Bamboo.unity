@@ -1218,6 +1218,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6705470480268627442, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.840863
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705470480268627442, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8616352
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705470480268627442, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.64758116
+      objectReference: {fileID: 0}
     - target: {fileID: 7865736265774452195, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
       value: -0.043319702
