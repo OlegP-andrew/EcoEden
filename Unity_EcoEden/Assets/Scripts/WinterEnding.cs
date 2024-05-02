@@ -18,6 +18,7 @@ public class WinterEnding : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             anim.SetTrigger("celebrate");
+            SoundManager.S.PlantBuddyCelebrate();
             levelLoader.LoadNextScene();
         }
     }

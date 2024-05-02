@@ -220,6 +220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hugebamboo
       objectReference: {fileID: 0}
+    - target: {fileID: 4184076416802925368, guid: a379ecee7f9412e4f8e6c4c76e2e1f94, type: 3}
+      propertyPath: oldIcon
+      value: 
+      objectReference: {fileID: 385258100}
     - target: {fileID: 8604183186842095183, guid: a379ecee7f9412e4f8e6c4c76e2e1f94, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.3
@@ -1230,6 +1234,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+--- !u!1 &385258100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4525692977737036346, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+  m_PrefabInstance: {fileID: 385258099}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410740293 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4668968925207950708, guid: 82333022671d13c4f973a6ff89b26bd9, type: 3}

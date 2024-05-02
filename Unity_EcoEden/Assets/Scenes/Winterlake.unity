@@ -985,6 +985,7 @@ GameObject:
   - component: {fileID: 530093886}
   - component: {fileID: 530093887}
   - component: {fileID: 530093888}
+  - component: {fileID: 530093889}
   m_Layer: 0
   m_Name: motherplant
   m_TagString: Untagged
@@ -1048,6 +1049,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 2022661489}
   plantBuddy: {fileID: 15912522}
+--- !u!114 &530093889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530093885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1984873759
+      Data2: 1164701094
+      Data3: 780026752
+      Data4: -677577643
+    Path: event:/MotherPlantScene/Motherplant
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &666903846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2522,7 +2554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0439e80979007455e8482d3008a370c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamestate: 3
+  gamestate: 4
 --- !u!114 &1634140773
 MonoBehaviour:
   m_ObjectHideFlags: 0

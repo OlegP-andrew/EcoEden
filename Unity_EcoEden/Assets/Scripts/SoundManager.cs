@@ -14,6 +14,7 @@ public class SoundManager : MonoBehaviour
     private FMOD.Studio.EventInstance caveAmbience;
     private FMOD.Studio.EventInstance bambooAmbience;
     private FMOD.Studio.EventInstance autumnAmbience;
+    private FMOD.Studio.EventInstance motherPlantAmbience;
     private FMOD.Studio.EventInstance blagoon;
     
     // Plant Buddy
@@ -44,6 +45,7 @@ public class SoundManager : MonoBehaviour
         caveAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/CaveScene/CaveAmbience");
         bambooAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/BambooScene/BambooAmbience");
         autumnAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/AutumnScene/AutumnAmbience");
+        motherPlantAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/MotherPlantScene/MotherplantAmbience");
 
         StartAmbience(gamestate);
 
@@ -53,6 +55,13 @@ public class SoundManager : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    //UI
+
+    public void UI1()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/UI2");
     }
     
     //Plant Buddy SFX
@@ -144,6 +153,7 @@ public class SoundManager : MonoBehaviour
                 caveAmbience.start();
                 break;
             case 4:
+                motherPlantAmbience.start();
                 break;
         }
     }
@@ -153,6 +163,7 @@ public class SoundManager : MonoBehaviour
         caveAmbience.stop(STOP_MODE.IMMEDIATE);
         bambooAmbience.stop(STOP_MODE.IMMEDIATE);
         autumnAmbience.stop(STOP_MODE.IMMEDIATE);
+        motherPlantAmbience.stop(STOP_MODE.IMMEDIATE);
     }
 
     public void CaveAmbienceZones(bool isCave)
