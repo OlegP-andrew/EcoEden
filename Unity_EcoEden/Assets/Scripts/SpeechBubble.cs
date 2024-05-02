@@ -12,13 +12,28 @@ public class SpeechBubble : MonoBehaviour
     public GameObject panel;
     public float sphereRadius;
     public List<LayerMask> layerMasks;
+    public int sceneNum;
 
     // Start is called before the first frame update
     void Start()
     {
-        AddLine("Where am I? I should look around.");
-        AddLine("Press TAB to open up my robot menu");
-        // AddLine("I love it when it rains!");
+        if (sceneNum == 0)
+        {
+            AddLine("Where am I? I should look around.");
+            AddLine("Press TAB to open up my robot menu");
+        }
+        if (sceneNum == 1)
+        {
+            AddLine("It's autumn...");
+        }
+        if (sceneNum == 2)
+        {
+            AddLine("Oh it's dark in here...");
+        }
+        if (sceneNum == 3)
+        {
+            AddLine("I feel cold.");
+        }
 
         StartCoroutine(ShowLineRepeatedly());
     }
@@ -76,6 +91,7 @@ public class SpeechBubble : MonoBehaviour
                 if (layerMask == LayerMask.GetMask("Crystal"))
                 {
                     AddLine("There's some light trapped in the crystal.");
+                    AddLine("This crystal looks fragile??");
                 }
                 if (layerMask == LayerMask.GetMask("Boat"))
                 {
@@ -95,10 +111,6 @@ public class SpeechBubble : MonoBehaviour
                 if (layerMask == LayerMask.GetMask("Autgap"))
                 {
                     AddLine("The gaps are soooo deep! I'm scared.");
-                }
-                if (layerMask == LayerMask.GetMask("Motherscene"))
-                {
-                    AddLine("I feel cold.");
                 }
             }
         }

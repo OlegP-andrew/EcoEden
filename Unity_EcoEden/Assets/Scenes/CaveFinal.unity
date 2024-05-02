@@ -12179,7 +12179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 884352946824616791, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1973615529731026272, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_IsKinematic
@@ -12238,6 +12238,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 33a72ccba8d922e42a93370d5fcc2cb2, type: 2}
     - target: {fileID: 5646985952363002111, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: sceneNum
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646985952363002111, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: layerMasks.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -12292,6 +12296,30 @@ PrefabInstance:
     - target: {fileID: 5669807026851981027, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790719714127687890, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790719714127687890, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790719714127687890, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790719714127687890, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790719714127687890, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.194
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790719714127687890, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6500402308594458058, guid: 79944954f217fa44a8eae2efd33d42f0, type: 3}
       propertyPath: m_Name
@@ -13137,7 +13165,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 275319
+    m_Bits: 275447
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
