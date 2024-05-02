@@ -154,16 +154,28 @@ PrefabInstance:
       value: button
       objectReference: {fileID: 0}
     - target: {fileID: 2577422742827639761, guid: e41db15dfe777b049b2e172205ee4ea6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5131923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577422742827639761, guid: e41db15dfe777b049b2e172205ee4ea6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8477024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577422742827639761, guid: e41db15dfe777b049b2e172205ee4ea6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5131923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577422742827639761, guid: e41db15dfe777b049b2e172205ee4ea6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.000000020407
       objectReference: {fileID: 0}
     - target: {fileID: 2577422742827639761, guid: e41db15dfe777b049b2e172205ee4ea6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0025
       objectReference: {fileID: 0}
     - target: {fileID: 2577422742827639761, guid: e41db15dfe777b049b2e172205ee4ea6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.000000011239
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
