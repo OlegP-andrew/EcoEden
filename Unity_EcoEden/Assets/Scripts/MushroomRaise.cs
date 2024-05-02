@@ -27,5 +27,6 @@ public class MushroomRaise : MonoBehaviour
     {
         toggled = !toggled;
         m_Animator.SetBool("grow", true);
+        SoundManager.S.MushroomGrow(this.gameObject);
     }
 }

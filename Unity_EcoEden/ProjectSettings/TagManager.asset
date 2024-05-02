@@ -15,6 +15,7 @@ TagManager:
   - Stone
   - MazeLowerLevel
   - AutumnLowerLevel
+  - Leaf
   layers:
   - Default
   - TransparentFX

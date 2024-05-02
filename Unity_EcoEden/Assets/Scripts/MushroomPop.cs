@@ -8,6 +8,8 @@ public class MushroomPop : MonoBehaviour
     [SerializeField]
     public GameObject[] toggles;
     Animator m_Animator;
+
+    private int interactCounter = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +28,13 @@ public class MushroomPop : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && other.transform.position.y - gameObject.transform.position.y > 2f)
+        if (other.gameObject.CompareTag("Player") &&
+            other.transform.position.y - gameObject.transform.position.y > 2f && interactCounter < 1)
         {
+            interactCounter += 1;
             Interact();
             m_Animator.SetBool("press", true);
+            SoundManager.S.ButtonPress();
         }
     }
 

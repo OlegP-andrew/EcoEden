@@ -18,6 +18,7 @@ public class LevelLoader : MonoBehaviour
 
     public void ActuallyLoad()
     {
+        SoundManager.S.StopAmbience();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }

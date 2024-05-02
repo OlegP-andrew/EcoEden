@@ -69,6 +69,9 @@ public class PlayerCollisionHandler : MonoBehaviour
                 case "Stone":
                     surfaceMaterial = "Stone";
                     break;
+                case "Leaf":
+                    surfaceMaterial = "Leaf";
+                    break;
                 default:
                     surfaceMaterial = "Grass";
                     break;

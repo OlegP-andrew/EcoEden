@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
     // Ambiences
     private FMOD.Studio.EventInstance caveAmbience;
     private FMOD.Studio.EventInstance bambooAmbience;
+    private FMOD.Studio.EventInstance autumnAmbience;
     private FMOD.Studio.EventInstance blagoon;
     
     // Plant Buddy
@@ -39,10 +40,11 @@ public class SoundManager : MonoBehaviour
         // Set and start driving FMOD Instance
         plantBuddyDriving = FMODUnity.RuntimeManager.CreateInstance("event:/PlantBuddy/Driving");
         plantBuddyDriving.start();
-
+        
         caveAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/CaveScene/CaveAmbience");
         bambooAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/BambooScene/BambooAmbience");
-        
+        autumnAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/AutumnScene/AutumnAmbience");
+
         StartAmbience(gamestate);
 
     }
@@ -136,15 +138,21 @@ public class SoundManager : MonoBehaviour
                 bambooAmbience.start();
                 break;
             case 2:
-                bambooAmbience.stop(STOP_MODE.ALLOWFADEOUT);
+                autumnAmbience.start();
                 break;
             case 3:
                 caveAmbience.start();
                 break;
             case 4:
-                caveAmbience.stop(STOP_MODE.ALLOWFADEOUT);
                 break;
         }
+    }
+
+    public void StopAmbience()
+    {
+        caveAmbience.stop(STOP_MODE.IMMEDIATE);
+        bambooAmbience.stop(STOP_MODE.IMMEDIATE);
+        autumnAmbience.stop(STOP_MODE.IMMEDIATE);
     }
 
     public void CaveAmbienceZones(bool isCave)
@@ -185,6 +193,18 @@ public class SoundManager : MonoBehaviour
     public void BambooGrow(GameObject bamboo)
     {
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/BambooScene/BambooGrow", bamboo);
+    }
+    
+    // Autumn Scene
+
+    public void ButtonPress()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/AutumnScene/MushroomPress");
+    }
+
+    public void MushroomGrow(GameObject mushroom)
+    {
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/AutumnScene/MushroomGrow", mushroom);
     }
     
     // Cave Scene
