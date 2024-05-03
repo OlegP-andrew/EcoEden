@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.cycling74.chordsbassdemo": "file:../BlainePackages/chordbassdemo/ChordsBassdemo",
     "com.cycling74.rnbotypes": "file:../BlainePackages/rnbo.unity.audioplugin/RNBOTypes",
     "com.srcnalt.openai-unity": "https://github.com/srcnalt/OpenAI-Unity.git",
     "com.unity.2d.sprite": "1.0.0",
